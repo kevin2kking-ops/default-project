@@ -1,0 +1,13 @@
+{
+  "_comment": "Resolved launch commands captured at install time. Used by SmartStartup.ps1.",
+  "resolved": [
+    { "match": "Rainmeter", "exe": "C:\\Program Files\\Rainmeter\\Rainmeter.exe", "args": "" },
+    { "match": "Wallpaper Slideshow", "exe": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe", "args": "-WindowStyle Hidden -ExecutionPolicy Bypass -File \"C:\\Users\\KEVIN\\Documents\\Default Project\\.opencode\\scripts\\wallpaper-slideshow.ps1\" -PanMode KenBurns" },
+    { "match": "WallpaperAware", "exe": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe", "args": "-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File \"C:\\Users\\KEVIN\\OneDrive\\Documents\\Rainmeter\\Skins\\Suvi_Jarvis_Rainmeter\\@Resources\\wallpaper-aware.ps1\" -Watch" },
+    { "match": "GoogleChromeAutoLaunch", "exe": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe", "args": "--no-startup-window /prefetch:5" },
+    { "match": "MicrosoftEdgeAutoLaunch", "exe": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe", "args": "--win-session-start" },
+    { "match": "Gemini AI", "exe": "C:\\Users\\KEVIN\\AppData\\Local\\Google\\Google\\latest\\google.exe", "args": "--start_hidden" },
+    { "match": "Google.app", "exe": "C:\\Users\\KEVIN\\AppData\\Local\\Google\\Google\\latest\\google.exe", "args": "" },
+    { "match": "Send to OneNote", "exe": "C:\\Program Files\\Microsoft Office\\root\\Office16\\ONENOTEM.EXE", "args": "/tsr" }
+  ]
+}

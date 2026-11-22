@@ -1,0 +1,542 @@
+﻿2026-09-29 18:43:35 === SmartStartup boot run: 16 startup entries found ===
+2026-09-29 18:43:35 Sleep 60s before Rainmeter (t+60s)
+2026-09-29 18:43:36 SKIP Rainmeter: cannot resolve exe from: Rainmeter.lnk
+2026-09-29 18:43:36 Sleep 30s before WallpaperAware (t+90s)
+2026-09-29 18:43:36 SKIP WallpaperAware: cannot resolve exe from: WallpaperAware.lnk
+2026-09-29 18:43:36 SKIP Wallpaper Slideshow: cannot resolve exe from: Wallpaper Slideshow.lnk
+2026-09-29 18:43:36 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-09-29 18:43:36 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-09-29 18:43:36 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-09-29 18:43:36 Sleep 30s before Google.app (t+150s)
+2026-09-29 18:43:36 SKIP Google.app: cannot resolve exe from: Google.app.lnk
+2026-09-29 18:43:36 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-09-29 18:43:36 Sleep 30s before Send to OneNote (t+180s)
+2026-09-29 18:43:37 SKIP Send to OneNote: cannot resolve exe from: Send to OneNote.lnk
+2026-09-29 18:43:37 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-09-29 18:53:23 === SmartStartup boot run: 16 startup entries found ===
+2026-09-29 18:53:24 Sleep 60s before Rainmeter (t+60s)
+2026-09-29 18:53:24 LAUNCH Rainmeter: C:\Program Files\Rainmeter\Rainmeter.exe  [Idle/minimized]
+2026-09-29 18:53:24 Sleep 30s before WallpaperAware (t+90s)
+2026-09-29 18:53:24 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-09-29 18:53:25 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-09-29 18:53:25 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-09-29 18:53:25 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-09-29 18:53:25 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-09-29 18:53:25 Sleep 30s before Google.app (t+150s)
+2026-09-29 18:53:26 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-09-29 18:53:26 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-09-29 18:53:26 Sleep 30s before Send to OneNote (t+180s)
+2026-09-29 18:53:26 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-09-29 18:53:26 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-10-13 00:04:31 === SmartStartup boot run: 8 resolved apps, 14 autostart entries ===
+2026-10-13 00:04:31 Sleep 60s before Rainmeter (t+60s)
+2026-10-13 00:04:31 LAUNCH Rainmeter: C:\Program Files\Rainmeter\Rainmeter.exe  [Idle/minimized]
+2026-10-13 00:04:31 Sleep 30s before WallpaperAware (t+90s)
+2026-10-13 00:04:31 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-10-13 00:04:31 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-10-13 00:04:31 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-10-13 00:04:31 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-10-13 00:04:31 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-10-13 00:04:31 Sleep 30s before Google.app (t+150s)
+2026-10-13 00:04:31 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-10-13 00:04:31 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-10-13 00:04:31 Sleep 30s before Send to OneNote (t+180s)
+2026-10-13 00:04:31 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-10-13 00:04:31 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-10-14 14:12:31 === SmartStartup boot run: 8 resolved apps, 16 autostart entries ===
+2026-10-14 14:12:32 Sleep 60s before Rainmeter (t+60s)
+2026-10-14 14:13:32 LAUNCH Rainmeter: C:\Program Files\Rainmeter\Rainmeter.exe  [Idle/minimized]
+2026-10-14 14:13:32 FAIL Rainmeter: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-10-14 14:13:32 Sleep 30s before WallpaperAware (t+90s)
+2026-10-14 14:14:02 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-10-14 14:14:11 OK WallpaperAware pid=18832 set Idle + trimmed
+2026-10-14 14:14:11 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-10-14 14:14:19 OK Wallpaper Slideshow pid=5432 set Idle + trimmed
+2026-10-14 14:14:19 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-10-14 14:14:49 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-10-14 14:14:55 OK MicrosoftEdgeAutoLaunch pid=12740 set Idle + trimmed
+2026-10-14 14:14:55 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-10-14 14:15:03 WARN GoogleChromeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 12432.
+2026-10-14 14:15:03 Sleep 30s before Google.app (t+150s)
+2026-10-14 14:15:34 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-10-14 14:15:34 FAIL Google.app: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-10-14 14:15:34 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-10-14 14:15:42 OK Gemini AI pid=18952 set Idle + trimmed
+2026-10-14 14:15:42 Sleep 30s before Send to OneNote (t+180s)
+2026-10-14 14:16:13 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-10-14 14:16:18 OK Send to OneNote pid=15444 set Idle + trimmed
+2026-10-14 14:16:18 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-10-15 13:29:51 === SmartStartup boot run: 8 resolved apps, 17 autostart entries ===
+2026-10-15 13:29:52 Sleep 60s before Rainmeter (t+60s)
+2026-10-15 13:30:52 LAUNCH Rainmeter: C:\Program Files\Rainmeter\Rainmeter.exe  [Idle/minimized]
+2026-10-15 13:30:52 FAIL Rainmeter: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-10-15 13:30:52 Sleep 30s before WallpaperAware (t+90s)
+2026-10-15 13:31:22 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-10-15 13:31:28 OK WallpaperAware pid=18380 set Idle + trimmed
+2026-10-15 13:31:28 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-10-15 13:31:34 WARN Wallpaper Slideshow launched but priority set failed: Cannot find a process with the process identifier 16124.
+2026-10-15 13:31:34 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-10-15 13:32:04 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-10-15 13:32:10 OK MicrosoftEdgeAutoLaunch pid=15520 set Idle + trimmed
+2026-10-15 13:32:10 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-10-15 13:32:16 WARN GoogleChromeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 6612.
+2026-10-15 13:32:16 Sleep 30s before Google.app (t+150s)
+2026-10-15 13:32:46 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-10-15 13:32:46 FAIL Google.app: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-10-15 13:32:46 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-10-15 13:32:52 OK Gemini AI pid=16280 set Idle + trimmed
+2026-10-15 13:32:52 Sleep 30s before Send to OneNote (t+180s)
+2026-10-15 13:33:22 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-10-15 13:33:28 OK Send to OneNote pid=17868 set Idle + trimmed
+2026-10-15 13:33:28 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-10-15 20:45:12 === SmartStartup boot run: 8 resolved apps, 17 autostart entries ===
+2026-10-15 20:45:13 Sleep 60s before Rainmeter (t+60s)
+2026-10-15 20:46:13 LAUNCH Rainmeter: C:\Program Files\Rainmeter\Rainmeter.exe  [Idle/minimized]
+2026-10-15 20:46:14 FAIL Rainmeter: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-10-15 20:46:14 Sleep 30s before WallpaperAware (t+90s)
+2026-10-15 20:46:44 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-10-15 20:46:49 OK WallpaperAware pid=17544 set Idle + trimmed
+2026-10-15 20:46:49 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-10-15 20:46:55 WARN Wallpaper Slideshow launched but priority set failed: Cannot find a process with the process identifier 11836.
+2026-10-15 20:46:55 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-10-15 20:47:25 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-10-15 20:47:30 OK MicrosoftEdgeAutoLaunch pid=18320 set Idle + trimmed
+2026-10-15 20:47:32 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-10-15 20:47:37 WARN GoogleChromeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 14768.
+2026-10-15 20:47:41 Sleep 30s before Google.app (t+150s)
+2026-10-15 20:48:13 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-10-15 20:48:14 FAIL Google.app: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-10-15 20:48:14 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-10-15 20:48:21 OK Gemini AI pid=8780 set Idle + trimmed
+2026-10-15 20:48:21 Sleep 30s before Send to OneNote (t+180s)
+2026-10-15 20:48:54 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-10-15 20:49:07 OK Send to OneNote pid=17524 set Idle + trimmed
+2026-10-15 20:49:07 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-10-16 19:45:24 === SmartStartup boot run: 8 resolved apps, 17 autostart entries ===
+2026-10-16 19:45:25 Sleep 60s before Rainmeter (t+60s)
+2026-10-16 19:46:25 LAUNCH Rainmeter: C:\Program Files\Rainmeter\Rainmeter.exe  [Idle/minimized]
+2026-10-16 19:46:25 FAIL Rainmeter: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-10-16 19:46:25 Sleep 30s before WallpaperAware (t+90s)
+2026-10-16 19:46:55 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-10-16 19:47:01 OK WallpaperAware pid=8404 set Idle + trimmed
+2026-10-16 19:47:01 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-10-16 19:47:06 WARN Wallpaper Slideshow launched but priority set failed: Cannot find a process with the process identifier 1780.
+2026-10-16 19:47:06 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-10-16 19:47:36 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-10-16 19:47:41 OK MicrosoftEdgeAutoLaunch pid=19812 set Idle + trimmed
+2026-10-16 19:47:41 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-10-16 19:47:46 WARN GoogleChromeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 20808.
+2026-10-16 19:47:47 Sleep 30s before Google.app (t+150s)
+2026-10-16 19:48:17 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-10-16 19:48:17 FAIL Google.app: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-10-16 19:48:17 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-10-16 19:48:22 WARN Gemini AI launched but priority set failed: Cannot find a process with the process identifier 9264.
+2026-10-16 19:48:22 Sleep 30s before Send to OneNote (t+180s)
+2026-10-16 19:48:52 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-10-16 19:48:57 OK Send to OneNote pid=1952 set Idle + trimmed
+2026-10-16 19:48:57 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-10-17 17:13:05 === SmartStartup boot run: 8 resolved apps, 17 autostart entries ===
+2026-10-17 17:13:05 Sleep 60s before Rainmeter (t+60s)
+2026-10-17 17:14:07 LAUNCH Rainmeter: C:\Program Files\Rainmeter\Rainmeter.exe  [Idle/minimized]
+2026-10-17 17:14:10 FAIL Rainmeter: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-10-17 17:14:10 Sleep 30s before WallpaperAware (t+90s)
+2026-10-17 17:14:40 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-10-17 17:14:46 OK WallpaperAware pid=8900 set Idle + trimmed
+2026-10-17 17:14:46 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-10-17 17:14:52 WARN Wallpaper Slideshow launched but priority set failed: Cannot find a process with the process identifier 16564.
+2026-10-17 17:14:52 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-10-17 17:15:22 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-10-17 17:15:29 OK MicrosoftEdgeAutoLaunch pid=10780 set Idle + trimmed
+2026-10-17 17:15:29 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-10-17 17:15:36 WARN GoogleChromeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 17376.
+2026-10-17 17:15:36 Sleep 30s before Google.app (t+150s)
+2026-10-17 17:16:06 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-10-17 17:16:09 FAIL Google.app: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-10-17 17:16:10 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-10-17 17:16:15 WARN Gemini AI launched but priority set failed: Cannot find a process with the process identifier 4356.
+2026-10-17 17:16:16 Sleep 30s before Send to OneNote (t+180s)
+2026-10-17 17:16:46 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-10-17 17:16:51 OK Send to OneNote pid=16236 set Idle + trimmed
+2026-10-17 17:16:52 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-10-18 14:25:06 === SmartStartup boot run: 8 resolved apps, 17 autostart entries ===
+2026-10-18 14:25:06 Sleep 60s before Rainmeter (t+60s)
+2026-10-18 14:26:07 LAUNCH Rainmeter: C:\Program Files\Rainmeter\Rainmeter.exe  [Idle/minimized]
+2026-10-18 14:26:07 FAIL Rainmeter: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-10-18 14:26:07 Sleep 30s before WallpaperAware (t+90s)
+2026-10-18 14:26:38 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-10-18 14:26:43 OK WallpaperAware pid=1972 set Idle + trimmed
+2026-10-18 14:26:43 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-10-18 14:26:48 WARN Wallpaper Slideshow launched but priority set failed: Cannot find a process with the process identifier 16100.
+2026-10-18 14:26:48 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-10-18 14:27:18 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-10-18 14:27:27 OK MicrosoftEdgeAutoLaunch pid=13348 set Idle + trimmed
+2026-10-18 14:27:27 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-10-18 14:27:33 WARN GoogleChromeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 9716.
+2026-10-18 14:27:33 Sleep 30s before Google.app (t+150s)
+2026-10-18 14:28:04 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-10-18 14:28:04 FAIL Google.app: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-10-18 14:28:04 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-10-18 14:28:12 OK Gemini AI pid=13408 set Idle + trimmed
+2026-10-18 14:28:15 Sleep 30s before Send to OneNote (t+180s)
+2026-10-18 14:28:45 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-10-18 14:28:50 OK Send to OneNote pid=13028 set Idle + trimmed
+2026-10-18 14:28:50 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-10-18 22:26:08 === SmartStartup boot run: 8 resolved apps, 17 autostart entries ===
+2026-10-18 22:26:08 Sleep 60s before Rainmeter (t+60s)
+2026-10-18 22:27:08 LAUNCH Rainmeter: C:\Program Files\Rainmeter\Rainmeter.exe  [Idle/minimized]
+2026-10-18 22:27:08 FAIL Rainmeter: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-10-18 22:27:08 Sleep 30s before WallpaperAware (t+90s)
+2026-10-18 22:27:38 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-10-18 22:27:44 OK WallpaperAware pid=14172 set Idle + trimmed
+2026-10-18 22:27:44 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-10-18 22:27:50 WARN Wallpaper Slideshow launched but priority set failed: Cannot find a process with the process identifier 10168.
+2026-10-18 22:27:50 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-10-18 22:28:20 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-10-18 22:28:34 OK MicrosoftEdgeAutoLaunch pid=7564 set Idle + trimmed
+2026-10-18 22:28:34 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-10-18 22:28:40 WARN GoogleChromeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 8628.
+2026-10-18 22:28:43 Sleep 30s before Google.app (t+150s)
+2026-10-18 22:29:16 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-10-18 22:29:16 FAIL Google.app: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-10-18 22:29:16 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-10-18 22:29:24 WARN Gemini AI launched but priority set failed: Cannot find a process with the process identifier 12024.
+2026-10-18 22:29:24 Sleep 30s before Send to OneNote (t+180s)
+2026-10-18 22:29:54 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-10-18 22:29:59 OK Send to OneNote pid=10600 set Idle + trimmed
+2026-10-18 22:29:59 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-10-19 14:41:16 === SmartStartup boot run: 8 resolved apps, 17 autostart entries ===
+2026-10-19 14:41:17 Sleep 60s before Rainmeter (t+60s)
+2026-10-19 14:42:17 LAUNCH Rainmeter: C:\Program Files\Rainmeter\Rainmeter.exe  [Idle/minimized]
+2026-10-19 14:42:17 FAIL Rainmeter: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-10-19 14:42:17 Sleep 30s before WallpaperAware (t+90s)
+2026-10-19 14:42:47 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-10-19 14:42:55 OK WallpaperAware pid=3400 set Idle + trimmed
+2026-10-19 14:42:55 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-10-19 14:43:00 WARN Wallpaper Slideshow launched but priority set failed: Cannot find a process with the process identifier 14256.
+2026-10-19 14:43:00 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-10-19 14:43:30 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-10-19 14:43:35 OK MicrosoftEdgeAutoLaunch pid=5908 set Idle + trimmed
+2026-10-19 14:43:35 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-10-19 14:43:41 WARN GoogleChromeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 17688.
+2026-10-19 14:43:41 Sleep 30s before Google.app (t+150s)
+2026-10-19 14:44:11 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-10-19 14:44:11 FAIL Google.app: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-10-19 14:44:11 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-10-19 14:44:16 WARN Gemini AI launched but priority set failed: Cannot find a process with the process identifier 18476.
+2026-10-19 14:44:16 Sleep 30s before Send to OneNote (t+180s)
+2026-10-19 14:44:46 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-10-19 14:44:51 OK Send to OneNote pid=9884 set Idle + trimmed
+2026-10-19 14:44:51 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-10-23 22:16:33 === SmartStartup boot run: 8 resolved apps, 17 autostart entries ===
+2026-10-23 22:16:33 Sleep 60s before Rainmeter (t+60s)
+2026-10-23 22:17:33 LAUNCH Rainmeter: C:\Program Files\Rainmeter\Rainmeter.exe  [Idle/minimized]
+2026-10-23 22:17:33 FAIL Rainmeter: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-10-23 22:17:33 Sleep 30s before WallpaperAware (t+90s)
+2026-10-23 22:18:03 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-10-23 22:18:09 OK WallpaperAware pid=7188 set Idle + trimmed
+2026-10-23 22:18:09 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-10-23 22:18:14 OK Wallpaper Slideshow pid=13560 set Idle + trimmed
+2026-10-23 22:18:15 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-10-23 22:18:46 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-10-23 22:18:51 OK MicrosoftEdgeAutoLaunch pid=5628 set Idle + trimmed
+2026-10-23 22:18:51 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-10-23 22:18:56 WARN GoogleChromeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 6784.
+2026-10-23 22:18:56 Sleep 30s before Google.app (t+150s)
+2026-10-23 22:19:26 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-10-23 22:19:26 FAIL Google.app: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-10-23 22:19:26 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-10-23 22:19:31 WARN Gemini AI launched but priority set failed: Cannot find a process with the process identifier 12096.
+2026-10-23 22:19:31 Sleep 30s before Send to OneNote (t+180s)
+2026-10-23 22:20:01 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-10-23 22:20:06 OK Send to OneNote pid=18640 set Idle + trimmed
+2026-10-23 22:20:07 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-10-25 22:23:17 === SmartStartup boot run: 8 resolved apps, 17 autostart entries ===
+2026-10-25 22:23:17 Sleep 60s before Rainmeter (t+60s)
+2026-10-25 22:24:18 LAUNCH Rainmeter: C:\Program Files\Rainmeter\Rainmeter.exe  [Idle/minimized]
+2026-10-25 22:24:18 FAIL Rainmeter: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-10-25 22:24:18 Sleep 30s before WallpaperAware (t+90s)
+2026-10-25 22:24:48 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-10-25 22:24:56 OK WallpaperAware pid=19388 set Idle + trimmed
+2026-10-25 22:24:56 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-10-25 22:25:02 WARN Wallpaper Slideshow launched but priority set failed: Cannot find a process with the process identifier 2168.
+2026-10-25 22:25:02 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-10-25 22:25:32 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-10-25 22:25:37 OK MicrosoftEdgeAutoLaunch pid=1832 set Idle + trimmed
+2026-10-25 22:25:37 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-10-25 22:25:42 WARN GoogleChromeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 14324.
+2026-10-25 22:25:42 Sleep 30s before Google.app (t+150s)
+2026-10-25 22:26:12 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-10-25 22:26:12 FAIL Google.app: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-10-25 22:26:13 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-10-25 22:26:18 WARN Gemini AI launched but priority set failed: Cannot find a process with the process identifier 17896.
+2026-10-25 22:26:18 Sleep 30s before Send to OneNote (t+180s)
+2026-10-25 22:26:52 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-10-25 22:27:01 OK Send to OneNote pid=12232 set Idle + trimmed
+2026-10-25 22:27:01 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-10-30 14:40:49 === SmartStartup boot run: 8 resolved apps, 17 autostart entries ===
+2026-10-30 14:40:49 Sleep 60s before Rainmeter (t+60s)
+2026-10-30 14:41:57 LAUNCH Rainmeter: C:\Program Files\Rainmeter\Rainmeter.exe  [Idle/minimized]
+2026-10-30 14:42:01 FAIL Rainmeter: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-10-30 14:42:01 Sleep 30s before WallpaperAware (t+90s)
+2026-10-30 14:42:31 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-10-30 14:42:36 OK WallpaperAware pid=18056 set Idle + trimmed
+2026-10-30 14:42:36 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-10-30 14:42:41 WARN Wallpaper Slideshow launched but priority set failed: Cannot find a process with the process identifier 19052.
+2026-10-30 14:42:41 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-10-30 14:43:12 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-10-30 14:43:18 OK MicrosoftEdgeAutoLaunch pid=12004 set Idle + trimmed
+2026-10-30 14:43:18 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-10-30 14:43:23 WARN GoogleChromeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 10868.
+2026-10-30 14:43:23 Sleep 30s before Google.app (t+150s)
+2026-10-30 14:43:53 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-10-30 14:43:53 FAIL Google.app: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-10-30 14:43:53 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-10-30 14:44:02 WARN Gemini AI launched but priority set failed: Cannot find a process with the process identifier 17628.
+2026-10-30 14:44:02 Sleep 30s before Send to OneNote (t+180s)
+2026-10-30 14:44:32 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-10-30 14:44:37 OK Send to OneNote pid=18656 set Idle + trimmed
+2026-10-30 14:44:37 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-11-02 17:31:37 === SmartStartup boot run: 8 resolved apps, 17 autostart entries ===
+2026-11-02 17:31:37 Sleep 60s before Rainmeter (t+60s)
+2026-11-02 17:32:37 LAUNCH Rainmeter: C:\Program Files\Rainmeter\Rainmeter.exe  [Idle/minimized]
+2026-11-02 17:32:37 FAIL Rainmeter: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-11-02 17:32:37 Sleep 30s before WallpaperAware (t+90s)
+2026-11-02 17:33:07 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-11-02 17:33:12 OK WallpaperAware pid=13968 set Idle + trimmed
+2026-11-02 17:33:13 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-11-02 17:33:18 WARN Wallpaper Slideshow launched but priority set failed: Cannot find a process with the process identifier 13612.
+2026-11-02 17:33:18 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-11-02 17:33:48 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-11-02 17:33:53 OK MicrosoftEdgeAutoLaunch pid=11432 set Idle + trimmed
+2026-11-02 17:33:53 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-11-02 17:33:58 WARN GoogleChromeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 19444.
+2026-11-02 17:33:58 Sleep 30s before Google.app (t+150s)
+2026-11-02 17:34:28 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-11-02 17:34:28 FAIL Google.app: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-11-02 17:34:28 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-11-02 17:34:34 OK Gemini AI pid=2232 set Idle + trimmed
+2026-11-02 17:34:37 Sleep 30s before Send to OneNote (t+180s)
+2026-11-02 17:35:08 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-11-02 17:35:13 OK Send to OneNote pid=18712 set Idle + trimmed
+2026-11-02 17:35:13 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-11-03 07:22:30 === SmartStartup boot run: 8 resolved apps, 17 autostart entries ===
+2026-11-03 07:22:30 Sleep 60s before Rainmeter (t+60s)
+2026-11-03 07:23:37 LAUNCH Rainmeter: C:\Program Files\Rainmeter\Rainmeter.exe  [Idle/minimized]
+2026-11-03 07:23:38 FAIL Rainmeter: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-11-03 07:23:38 Sleep 30s before WallpaperAware (t+90s)
+2026-11-03 07:24:09 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-11-03 07:24:15 OK WallpaperAware pid=20308 set Idle + trimmed
+2026-11-03 07:24:15 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-11-03 07:24:21 WARN Wallpaper Slideshow launched but priority set failed: Cannot find a process with the process identifier 19704.
+2026-11-03 07:24:21 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-11-03 07:24:51 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-11-03 07:24:56 WARN MicrosoftEdgeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 8856.
+2026-11-03 07:24:56 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-11-03 07:25:01 WARN GoogleChromeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 18572.
+2026-11-03 07:25:02 Sleep 30s before Google.app (t+150s)
+2026-11-03 07:25:32 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-11-03 07:25:32 FAIL Google.app: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-11-03 07:25:32 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-11-03 07:25:38 WARN Gemini AI launched but priority set failed: Cannot find a process with the process identifier 11152.
+2026-11-03 07:25:38 Sleep 30s before Send to OneNote (t+180s)
+2026-11-03 07:26:08 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-11-03 07:26:13 OK Send to OneNote pid=19716 set Idle + trimmed
+2026-11-03 07:26:13 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-11-04 12:20:11 === SmartStartup boot run: 8 resolved apps, 17 autostart entries ===
+2026-11-04 12:20:11 Sleep 60s before Rainmeter (t+60s)
+2026-11-04 12:21:11 SKIP Rainmeter: cannot resolve exe from: Rainmeter.lnk.disabled
+2026-11-04 12:21:11 Sleep 30s before WallpaperAware (t+90s)
+2026-11-04 12:21:41 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-11-04 12:22:59 WARN WallpaperAware launched but priority set failed: Cannot find a process with the process identifier 22068.
+2026-11-04 12:23:00 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-11-04 12:23:05 WARN Wallpaper Slideshow launched but priority set failed: Cannot find a process with the process identifier 4724.
+2026-11-04 12:23:05 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-11-04 12:23:35 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-11-04 12:23:40 WARN MicrosoftEdgeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 3196.
+2026-11-04 12:23:40 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-11-04 12:23:46 WARN GoogleChromeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 6248.
+2026-11-04 12:23:46 Sleep 30s before Google.app (t+150s)
+2026-11-04 12:24:17 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-11-04 12:24:17 FAIL Google.app: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-11-04 12:24:17 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-11-04 12:24:22 WARN Gemini AI launched but priority set failed: Cannot find a process with the process identifier 1564.
+2026-11-04 12:24:22 Sleep 30s before Send to OneNote (t+180s)
+2026-11-04 12:24:52 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-11-04 12:24:57 OK Send to OneNote pid=10436 set Idle + trimmed
+2026-11-04 12:24:57 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-11-04 14:50:13 === SmartStartup boot run: 8 resolved apps, 17 autostart entries ===
+2026-11-04 14:50:13 Sleep 60s before Rainmeter (t+60s)
+2026-11-04 14:51:13 SKIP Rainmeter: cannot resolve exe from: Rainmeter.lnk.disabled
+2026-11-04 14:51:13 Sleep 30s before WallpaperAware (t+90s)
+2026-11-04 14:51:43 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-11-04 14:51:48 WARN WallpaperAware launched but priority set failed: Cannot find a process with the process identifier 20388.
+2026-11-04 14:51:48 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-11-04 14:51:53 WARN Wallpaper Slideshow launched but priority set failed: Cannot find a process with the process identifier 13684.
+2026-11-04 14:51:53 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-11-04 14:52:24 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-11-04 14:52:29 WARN MicrosoftEdgeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 14252.
+2026-11-04 14:52:29 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-11-04 14:52:34 OK GoogleChromeAutoLaunch pid=11920 set Idle + trimmed
+2026-11-04 14:52:34 Sleep 30s before Google.app (t+150s)
+2026-11-04 14:53:04 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-11-04 14:53:04 FAIL Google.app: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-11-04 14:53:04 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-11-04 14:53:09 WARN Gemini AI launched but priority set failed: Cannot find a process with the process identifier 17604.
+2026-11-04 14:53:09 Sleep 30s before Send to OneNote (t+180s)
+2026-11-04 14:53:39 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-11-04 14:53:45 OK Send to OneNote pid=20280 set Idle + trimmed
+2026-11-04 14:53:45 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-11-05 09:26:57 === SmartStartup boot run: 8 resolved apps, 17 autostart entries ===
+2026-11-05 09:26:57 Sleep 60s before Rainmeter (t+60s)
+2026-11-05 09:27:58 SKIP Rainmeter: cannot resolve exe from: Rainmeter.lnk.disabled
+2026-11-05 09:27:58 Sleep 30s before WallpaperAware (t+90s)
+2026-11-05 09:28:28 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-11-05 09:28:33 WARN WallpaperAware launched but priority set failed: Cannot find a process with the process identifier 19744.
+2026-11-05 09:28:33 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-11-05 09:28:38 WARN Wallpaper Slideshow launched but priority set failed: Cannot find a process with the process identifier 20452.
+2026-11-05 09:28:38 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-11-05 09:29:08 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-11-05 09:29:14 WARN MicrosoftEdgeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 12004.
+2026-11-05 09:29:14 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-11-05 09:29:19 WARN GoogleChromeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 11688.
+2026-11-05 09:29:19 Sleep 30s before Google.app (t+150s)
+2026-11-05 09:29:49 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-11-05 09:29:57 FAIL Google.app: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-11-05 09:29:57 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-11-05 09:31:37 WARN Gemini AI launched but priority set failed: Cannot find a process with the process identifier 13836.
+2026-11-05 09:31:38 Sleep 30s before Send to OneNote (t+180s)
+2026-11-05 09:32:09 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-11-05 09:32:15 OK Send to OneNote pid=19684 set Idle + trimmed
+2026-11-05 09:32:15 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-11-05 21:20:39 === SmartStartup boot run: 8 resolved apps, 17 autostart entries ===
+2026-11-05 21:20:39 Sleep 60s before Rainmeter (t+60s)
+2026-11-05 21:21:39 SKIP Rainmeter: cannot resolve exe from: Rainmeter.lnk.disabled
+2026-11-05 21:21:39 Sleep 30s before WallpaperAware (t+90s)
+2026-11-05 21:22:09 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-11-05 21:22:15 WARN WallpaperAware launched but priority set failed: Cannot find a process with the process identifier 9316.
+2026-11-05 21:22:15 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-11-05 21:22:20 WARN Wallpaper Slideshow launched but priority set failed: Cannot find a process with the process identifier 15968.
+2026-11-05 21:22:20 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-11-05 21:22:50 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-11-05 21:22:55 WARN MicrosoftEdgeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 18640.
+2026-11-05 21:22:55 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-11-05 21:23:00 WARN GoogleChromeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 4460.
+2026-11-05 21:23:00 Sleep 30s before Google.app (t+150s)
+2026-11-05 21:23:31 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-11-05 21:23:31 FAIL Google.app: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-11-05 21:23:31 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-11-05 21:23:36 WARN Gemini AI launched but priority set failed: Cannot find a process with the process identifier 3700.
+2026-11-05 21:23:36 Sleep 30s before Send to OneNote (t+180s)
+2026-11-05 21:24:06 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-11-05 21:24:11 OK Send to OneNote pid=17968 set Idle + trimmed
+2026-11-05 21:24:11 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-11-05 21:35:09 === SmartStartup boot run: 8 resolved apps, 17 autostart entries ===
+2026-11-05 21:35:09 Sleep 60s before Rainmeter (t+60s)
+2026-11-05 21:36:10 SKIP Rainmeter: cannot resolve exe from: Rainmeter.lnk.disabled
+2026-11-05 21:36:10 Sleep 30s before WallpaperAware (t+90s)
+2026-11-05 21:36:45 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-11-05 21:36:50 OK WallpaperAware pid=10980 set Idle + trimmed
+2026-11-05 21:36:50 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-11-05 21:36:55 OK Wallpaper Slideshow pid=17816 set Idle + trimmed
+2026-11-05 21:36:55 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-11-05 21:37:25 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-11-05 21:37:30 WARN MicrosoftEdgeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 9300.
+2026-11-05 21:37:30 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-11-05 21:37:36 WARN GoogleChromeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 18440.
+2026-11-05 21:37:36 Sleep 30s before Google.app (t+150s)
+2026-11-05 21:38:06 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-11-05 21:38:11 FAIL Google.app: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-11-05 21:38:12 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-11-05 21:38:17 WARN Gemini AI launched but priority set failed: Cannot find a process with the process identifier 9992.
+2026-11-05 21:38:17 Sleep 30s before Send to OneNote (t+180s)
+2026-11-05 21:38:47 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-11-05 21:38:53 OK Send to OneNote pid=17440 set Idle + trimmed
+2026-11-05 21:38:53 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-11-06 11:20:36 === SmartStartup boot run: 8 resolved apps, 17 autostart entries ===
+2026-11-06 11:20:37 Sleep 60s before Rainmeter (t+60s)
+2026-11-06 11:21:37 SKIP Rainmeter: cannot resolve exe from: Rainmeter.lnk.disabled
+2026-11-06 11:21:37 Sleep 30s before WallpaperAware (t+90s)
+2026-11-06 11:22:07 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-11-06 11:22:12 WARN WallpaperAware launched but priority set failed: Cannot find a process with the process identifier 18940.
+2026-11-06 11:22:12 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-11-06 11:22:17 WARN Wallpaper Slideshow launched but priority set failed: Cannot find a process with the process identifier 16944.
+2026-11-06 11:22:17 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-11-06 11:22:47 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-11-06 11:22:52 WARN MicrosoftEdgeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 18652.
+2026-11-06 11:22:52 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-11-06 11:22:57 WARN GoogleChromeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 20112.
+2026-11-06 11:22:57 Sleep 30s before Google.app (t+150s)
+2026-11-06 11:23:28 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-11-06 11:23:34 FAIL Google.app: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-11-06 11:23:34 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-11-06 11:23:39 WARN Gemini AI launched but priority set failed: Cannot find a process with the process identifier 1332.
+2026-11-06 11:23:40 Sleep 30s before Send to OneNote (t+180s)
+2026-11-06 11:24:10 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-11-06 11:24:15 OK Send to OneNote pid=19780 set Idle + trimmed
+2026-11-06 11:24:15 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-11-07 08:57:45 === SmartStartup boot run: 8 resolved apps, 17 autostart entries ===
+2026-11-07 08:57:45 Sleep 60s before Rainmeter (t+60s)
+2026-11-07 08:58:45 SKIP Rainmeter: cannot resolve exe from: Rainmeter.lnk.disabled
+2026-11-07 08:58:45 Sleep 30s before WallpaperAware (t+90s)
+2026-11-07 08:59:15 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-11-07 08:59:21 WARN WallpaperAware launched but priority set failed: Cannot find a process with the process identifier 19304.
+2026-11-07 08:59:21 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-11-07 08:59:26 WARN Wallpaper Slideshow launched but priority set failed: Cannot find a process with the process identifier 2764.
+2026-11-07 08:59:26 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-11-07 08:59:56 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-11-07 09:00:01 WARN MicrosoftEdgeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 5668.
+2026-11-07 09:00:01 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-11-07 09:00:10 WARN GoogleChromeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 18904.
+2026-11-07 09:00:10 Sleep 30s before Google.app (t+150s)
+2026-11-07 09:00:40 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-11-07 09:00:40 FAIL Google.app: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-11-07 09:00:40 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-11-07 09:00:45 WARN Gemini AI launched but priority set failed: Cannot find a process with the process identifier 18864.
+2026-11-07 09:00:46 Sleep 30s before Send to OneNote (t+180s)
+2026-11-07 09:01:16 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-11-07 09:01:21 OK Send to OneNote pid=10752 set Idle + trimmed
+2026-11-07 09:01:21 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-11-07 09:55:26 === SmartStartup boot run: 8 resolved apps, 17 autostart entries ===
+2026-11-07 09:55:26 Sleep 60s before Rainmeter (t+60s)
+2026-11-07 09:56:26 SKIP Rainmeter: cannot resolve exe from: Rainmeter.lnk.disabled
+2026-11-07 09:56:26 Sleep 30s before WallpaperAware (t+90s)
+2026-11-07 09:56:56 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-11-07 09:57:02 WARN WallpaperAware launched but priority set failed: Cannot find a process with the process identifier 13736.
+2026-11-07 09:57:02 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-11-07 09:57:07 WARN Wallpaper Slideshow launched but priority set failed: Cannot find a process with the process identifier 19180.
+2026-11-07 09:57:07 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-11-07 09:57:37 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-11-07 09:57:42 WARN MicrosoftEdgeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 1392.
+2026-11-07 09:57:42 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-11-07 09:57:47 WARN GoogleChromeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 16572.
+2026-11-07 09:57:47 Sleep 30s before Google.app (t+150s)
+2026-11-07 09:58:17 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-11-07 09:58:17 FAIL Google.app: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-11-07 09:58:17 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-11-07 09:58:23 WARN Gemini AI launched but priority set failed: Cannot find a process with the process identifier 18092.
+2026-11-07 09:58:23 Sleep 30s before Send to OneNote (t+180s)
+2026-11-07 09:58:53 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-11-07 09:58:58 OK Send to OneNote pid=10092 set Idle + trimmed
+2026-11-07 09:58:58 === done. Use Wake-App.ps1 -AppName <match> for full power ===
+2026-11-07 12:32:51 === SmartStartup boot run: 8 resolved apps, 17 autostart entries ===
+2026-11-07 12:32:51 Sleep 60s before Rainmeter (t+60s)
+2026-11-07 12:33:51 SKIP Rainmeter: cannot resolve exe from: Rainmeter.lnk.disabled
+2026-11-07 12:33:51 Sleep 30s before WallpaperAware (t+90s)
+2026-11-07 12:34:23 LAUNCH WallpaperAware: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Users\KEVIN\OneDrive\Documents\Rainmeter\Skins\Suvi_Jarvis_Rainmeter\@Resources\wallpaper-aware.ps1" -Watch [Idle/minimized]
+2026-11-07 12:34:31 OK WallpaperAware pid=19980 set Idle + trimmed
+2026-11-07 12:34:31 LAUNCH Wallpaper Slideshow: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\KEVIN\Documents\Default Project\.opencode\scripts\wallpaper-slideshow.ps1" -PanMode KenBurns [Idle/minimized]
+2026-11-07 12:34:36 WARN Wallpaper Slideshow launched but priority set failed: Cannot find a process with the process identifier 16328.
+2026-11-07 12:34:36 Sleep 30s before MicrosoftEdgeAutoLaunch (t+120s)
+2026-11-07 12:35:06 LAUNCH MicrosoftEdgeAutoLaunch: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --win-session-start [Idle/minimized]
+2026-11-07 12:35:11 WARN MicrosoftEdgeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 10700.
+2026-11-07 12:35:11 LAUNCH GoogleChromeAutoLaunch: C:\Program Files\Google\Chrome\Application\chrome.exe --no-startup-window /prefetch:5 [Idle/minimized]
+2026-11-07 12:35:17 WARN GoogleChromeAutoLaunch launched but priority set failed: Cannot find a process with the process identifier 2008.
+2026-11-07 12:35:17 Sleep 30s before Google.app (t+150s)
+2026-11-07 12:35:47 LAUNCH Google.app: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe  [Idle/minimized]
+2026-11-07 12:35:47 FAIL Google.app: Cannot validate argument on parameter 'ArgumentList'. The argument is null or empty. Provide an argument that is not null or empty, and then try the command again.
+2026-11-07 12:35:47 LAUNCH Gemini AI: C:\Users\KEVIN\AppData\Local\Google\Google\latest\google.exe --start_hidden [Idle/minimized]
+2026-11-07 12:35:52 WARN Gemini AI launched but priority set failed: Cannot find a process with the process identifier 20284.
+2026-11-07 12:35:52 Sleep 30s before Send to OneNote (t+180s)
+2026-11-07 12:36:22 LAUNCH Send to OneNote: C:\Program Files\Microsoft Office\root\Office16\ONENOTEM.EXE /tsr [Idle/minimized]
+2026-11-07 12:36:27 OK Send to OneNote pid=18184 set Idle + trimmed
+2026-11-07 12:36:27 === done. Use Wake-App.ps1 -AppName <match> for full power ===

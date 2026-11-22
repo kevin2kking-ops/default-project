@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field Manual — The Complete Transformation System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EDE7D8;
+    --paper-light:#F7F3E8;
+    --ink:#201D17;
+    --ink-soft:#4A453A;
+    --red:#A32F1F;
+    --olive:#5C6B3F;
+    --rule:#C7BC9F;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:15px;
+    line-height:1.6;
+  }
+  h1,h2,h3,.display{
+    font-family:'Oswald', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+    margin:0;
+    color:var(--ink);
+  }
+  a{color:inherit;}
+  ::selection{background:var(--red);color:var(--paper-light);}
+
+  /* ===== layout shell ===== */
+  .shell{display:flex;max-width:1400px;margin:0 auto;}
+  .rail{
+    width:210px;
+    flex-shrink:0;
+    position:sticky;
+    top:0;
+    height:100vh;
+    overflow-y:auto;
+    border-right:1px solid var(--rule);
+    padding:24px 0 24px 0;
+  }
+  .rail-title{
+    font-family:'Oswald',sans-serif;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.12em;
+    color:var(--ink-soft);
+    padding:0 20px 16px 20px;
+    border-bottom:1px solid var(--rule);
+    margin-bottom:8px;
+  }
+  .rail a{
+    display:flex;
+    gap:10px;
+    align-items:baseline;
+    text-decoration:none;
+    padding:9px 20px;
+    font-size:12px;
+    letter-spacing:0.03em;
+    color:var(--ink-soft);
+    border-left:3px solid transparent;
+    transition:all .15s ease;
+  }
+  .rail a:hover{color:var(--ink);border-left-color:var(--olive);background:rgba(92,107,63,0.08);}
+  .rail a.active{color:var(--red);border-left-color:var(--red);background:rgba(163,47,31,0.06);font-weight:600;}
+  .rail-num{font-weight:700;color:var(--rule);width:16px;flex-shrink:0;}
+  .rail a.active .rail-num{color:var(--red);}
+
+  .main{flex:1;min-width:0;}
+
+  /* ===== hero / cover ===== */
+  .cover{
+    position:relative;
+    padding:90px 60px 70px 60px;
+    border-bottom:2px solid var(--ink);
+    overflow:hidden;
+    background:
+      repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(199,188,159,0.35) 28px),
+      var(--paper);
+  }
+  .cover-eyebrow{
+    font-size:12px;
+    letter-spacing:0.25em;
+    color:var(--ink-soft);
+    margin-bottom:18px;
+  }
+  .cover h1{
+    font-size:clamp(38px,6vw,74px);
+    line-height:0.98;
+    font-weight:700;
+    max-width:820px;
+  }
+  .cover h1 span{color:var(--red);}
+  .cover-sub{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:15px;
+    color:var(--ink-soft);
+    max-width:520px;
+    margin-top:22px;
+    line-height:1.7;
+  }
+  .stamp{
+    position:absolute;
+    top:70px;
+    right:70px;
+    width:150px;
+    height:150px;
+    border:4px solid var(--red);
+    border-radius:50%;
+    color:var(--red);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    transform:rotate(-14deg);
+    font-family:'Oswald',sans-serif;
+    font-weight:700;
+    font-size:15px;
+    letter-spacing:0.08em;
+    line-height:1.3;
+    opacity:0.9;
+    mix-blend-mode:multiply;
+  }
+  .stamp::before{
+    content:"";
+    position:absolute;
+    inset:8px;
+    border:1px solid var(--red);
+    border-radius:50%;
+  }
+  .cover-stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:0;
+    margin-top:50px;
+    border-top:1px solid var(--ink);
+  }
+  .cover-stat{
+    padding:18px 20px 0 0;
+    border-right:1px solid var(--rule);
+  }
+  .cover-stat:last-child{border-right:none;}
+  .cover-stat b{
+    display:block;
+    font-family:'Oswald',sans-serif;
+    font-size:34px;
+    color:var(--ink);
+  }
+  .cover-stat span{
+    font-size:11px;
+    color:var(--ink-soft);
+    letter-spacing:0.06em;
+  }
+  .setup-note{
+    margin-top:40px;
+    border:1px dashed var(--ink-soft);
+    background:var(--paper-light);
+    padding:16px 20px;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    max-width:640px;
+    line-height:1.7;
+  }
+  .setup-note b{
+    display:block;font-family:'Oswald',sans-serif;font-size:12px;
+    letter-spacing:0.08em;text-transform:uppercase;color:var(--red);margin-bottom:6px;
+  }
+  .setup-note code{
+    background:var(--paper);border:1px solid var(--rule);padding:1px 6px;font-size:11.5px;color:var(--ink);
+  }
+  .setup-files{
+    margin-top:10px;display:flex;flex-wrap:wrap;gap:6px;
+  }
+  .setup-files span{
+    background:var(--paper);border:1px solid var(--rule);
+    padding:3px 8px;font-size:11px;color:var(--ink);
+  }
+
+  /* ===== sections ===== */
+  section{padding:56px 60px;border-bottom:1px solid var(--rule);}
+  .sec-head{
+    display:flex;
+    align-items:baseline;
+    gap:16px;
+    margin-bottom:8px;
+  }
+  .sec-num{
+    font-family:'Oswald',sans-serif;
+    font-size:15px;
+    font-weight:700;
+    color:var(--red);
+    border:1.5px solid var(--red);
+    width:32px;height:32px;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .sec-head h2{font-size:26px;font-weight:600;}
+  .sec-tag{
+    font-size:11px;
+    color:var(--ink-soft);
+    letter-spacing:0.08em;
+    margin-left:48px;
+    margin-bottom:28px;
+    max-width:640px;
+  }
+
+  /* tables (ledger style) */
+  table{width:100%;border-collapse:collapse;margin:14px 0 28px 0;font-size:13px;}
+  caption{text-align:left;font-family:'Oswald',sans-serif;font-size:14px;font-weight:600;color:var(--ink);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:10px;}
+  th{
+    text-align:left;
+    font-family:'Oswald',sans-serif;
+    font-weight:600;
+    font-size:11px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--paper-light);
+    background:var(--ink);
+    padding:9px 12px;
+  }
+  td{padding:8px 12px;border-bottom:1px solid var(--rule);vertical-align:top;}
+  tr:nth-child(even) td{background:rgba(199,188,159,0.18);}
+  tr:hover td{background:rgba(92,107,63,0.10);}
+  td:first-child, th:first-child{font-weight:600;color:var(--ink);}
+
+  .warmup, .cooldown{
+    background:var(--paper-light);
+    border-left:3px solid var(--olive);
+    padding:14px 18px;
+    margin-bottom:20px;
+    font-size:13px;
+  }
+  .warmup b, .cooldown b{
+    display:block;font-family:'Oswald',sans-serif;font-size:12px;
+    letter-spacing:0.08em;text-transform:uppercase;color:var(--olive);margin-bottom:6px;
+  }
+  .warmup ul, .cooldown ul{margin:0;padding-left:18px;}
+  .warmup li, .cooldown li{margin-bottom:3px;}
+
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:36px;}
+  @media(max-width:820px){.two-col{grid-template-columns:1fr;}}
+
+  /* exercise icon reference grid */
+  .exguide-label{
+    font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:0.14em;
+    color:var(--ink-soft);margin:22px 0 10px 0;
+  }
+  .exguide{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:1px;
+    background:var(--rule);
+    border:1px solid var(--rule);
+    margin-bottom:10px;
+  }
+  @media(max-width:900px){.exguide{grid-template-columns:repeat(3,1fr);}}
+  @media(max-width:560px){.exguide{grid-template-columns:repeat(2,1fr);}}
+  .exguide-card{
+    background:var(--paper-light);
+    padding:16px 8px 12px 8px;
+    display:flex;flex-direction:column;align-items:center;gap:8px;
+    text-align:center;
+    transition:background .15s ease;
+  }
+  .exguide-card:hover{background:#fff;}
+  .exguide-card .exphoto{
+    position:relative;
+    width:64px;height:64px;
+    border:1px solid var(--ink-soft);
+    background:var(--paper);
+    display:flex;align-items:center;justify-content:center;
+    overflow:hidden;
+    flex-shrink:0;
+  }
+  .exguide-card .exphoto img{
+    width:100%;height:100%;object-fit:cover;display:block;
+    filter:grayscale(15%) contrast(1.03);
+  }
+  .exguide-card .exphoto .exicon{display:none;width:38px;height:38px;}
+  .exguide-card .exphoto.noimg img{display:none;}
+  .exguide-card .exphoto.noimg .exicon{display:block;}
+  .exguide-card .exphoto.noimg{background:var(--paper-light);}
+  .exguide-card .exicon svg{width:100%;height:100%;display:block;}
+  .exguide-card .exicon .stroke{stroke:var(--ink);}
+  .exguide-card .exicon .accent{stroke:var(--red);}
+  .exguide-card .exicon .ground{stroke:var(--rule);}
+  .exguide-card span{font-size:10.5px;letter-spacing:0.02em;color:var(--ink-soft);line-height:1.3;}
+
+  .note-strip{
+    display:flex;gap:10px;align-items:flex-start;
+    font-size:12.5px;color:var(--ink-soft);
+    border-top:1px dashed var(--rule);
+    padding-top:14px;margin-top:6px;
+  }
+  .note-strip::before{content:"▸";color:var(--red);flex-shrink:0;}
+
+  .tip-list{list-style:none;padding:0;margin:16px 0 0 0;}
+  .tip-list li{
+    padding:10px 0 10px 26px;
+    position:relative;
+    border-bottom:1px solid var(--rule);
+    font-size:13.5px;
+  }
+  .tip-list li:last-child{border-bottom:none;}
+  .tip-list li::before{
+    content:"—";
+    position:absolute;left:0;color:var(--red);font-weight:700;
+  }
+  .tip-list b{color:var(--ink);}
+
+  /* progression phase cards */
+  .phase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px;}
+  @media(max-width:900px){.phase-grid{grid-template-columns:1fr;}}
+  .phase-card{
+    border:1px solid var(--ink);
+    background:var(--paper-light);
+    padding:20px;
+    position:relative;
+  }
+  .phase-card::before{
+    content:attr(data-phase);
+    position:absolute;top:-11px;left:16px;
+    background:var(--ink);color:var(--paper-light);
+    font-family:'Oswald',sans-serif;font-size:11px;
+    letter-spacing:0.08em;padding:3px 10px;
+  }
+  .phase-card h3{font-size:16px;margin-top:8px;margin-bottom:10px;}
+  .phase-card p{font-size:12.5px;color:var(--ink-soft);margin:0 0 12px 0;line-height:1.6;}
+  .phase-card table{margin:0;font-size:12px;}
+  .phase-card th, .phase-card td{padding:6px 8px;}
+
+  /* checklist / interactive */
+  .checklist-wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px;margin-top:10px;}
+  @media(max-width:820px){.checklist-wrap{grid-template-columns:1fr;}}
+  .cl-group{margin-bottom:22px;}
+  .cl-group h3{
+    font-size:13px;letter-spacing:0.1em;color:var(--olive);
+    border-bottom:1px solid var(--rule);padding-bottom:6px;margin-bottom:8px;
+  }
+  .cl-item{
+    display:flex;align-items:center;gap:12px;
+    padding:8px 4px;cursor:pointer;user-select:none;
+    border-bottom:1px dotted var(--rule);
+    font-size:13.5px;
+  }
+  .cl-box{
+    width:20px;height:20px;flex-shrink:0;
+    border:1.5px solid var(--ink);
+    display:flex;align-items:center;justify-content:center;
+    position:relative;
+  }
+  .cl-box .mark{
+    opacity:0;transform:scale(1.6) rotate(-18deg);
+    color:var(--red);font-weight:700;font-size:15px;
+    transition:all .18s ease;
+    font-family:'Oswald',sans-serif;
+  }
+  .cl-item.done .cl-box .mark{opacity:1;transform:scale(1) rotate(-14deg);}
+  .cl-item.done span.label{color:var(--ink-soft);text-decoration:line-through;text-decoration-color:var(--red);}
+  .cl-progress{
+    display:flex;align-items:center;gap:14px;
+    margin-top:6px;margin-bottom:30px;
+    font-size:12px;color:var(--ink-soft);
+  }
+  .cl-progress .bar{
+    flex:1;height:8px;background:var(--rule);position:relative;overflow:hidden;
+  }
+  .cl-progress .bar i{
+    position:absolute;left:0;top:0;bottom:0;width:0%;
+    background:var(--red);transition:width .25s ease;
+  }
+  .stamp-approve{
+    display:inline-flex;align-items:center;gap:8px;
+    border:1.5px solid var(--red);color:var(--red);
+    padding:4px 12px;font-family:'Oswald',sans-serif;
+    font-size:11px;letter-spacing:0.1em;
+    transform:rotate(-2deg);opacity:0;transition:opacity .3s ease;
+  }
+  .cl-progress.full .stamp-approve{opacity:1;}
+
+  /* progress tracker */
+  .tracker-note{font-size:12.5px;color:var(--ink-soft);max-width:600px;margin-bottom:18px;}
+  .photo-row{display:flex;gap:14px;margin-bottom:26px;flex-wrap:wrap;}
+  .photo-chip{
+    border:1px dashed var(--ink-soft);
+    padding:14px 18px;text-align:center;font-size:12px;
+    color:var(--ink-soft);min-width:140px;
+  }
+  .photo-chip b{display:block;font-family:'Oswald',sans-serif;color:var(--ink);font-size:13px;margin-bottom:4px;letter-spacing:0.04em;}
+
+  /* final rules */
+  .rules-wrap{
+    background:var(--ink);
+    color:var(--paper-light);
+    padding:60px;
+  }
+  .rules-wrap .sec-head h2{color:var(--paper-light);}
+  .rules-wrap .sec-num{border-color:var(--red);color:var(--red);}
+  .rule-line{
+    display:flex;gap:18px;
+    padding:18px 0;
+    border-bottom:1px solid rgba(247,243,232,0.15);
+    align-items:baseline;
+  }
+  .rule-line:last-child{border-bottom:none;}
+  .rule-line b.n{
+    font-family:'Oswald',sans-serif;font-size:22px;color:var(--red);width:34px;flex-shrink:0;
+  }
+  .rule-line p{margin:0;font-size:14px;line-height:1.7;color:#DCD6C4;}
+  .rule-line strong{color:var(--paper-light);}
+  .sign-off{
+    margin-top:40px;padding-top:24px;border-top:1px dashed rgba(247,243,232,0.25);
+    font-size:13px;color:#B8B096;line-height:1.9;
+  }
+  .sign-off .stamp2{
+    display:inline-block;margin-top:14px;
+    border:2px solid var(--red);color:var(--red);
+    padding:8px 16px;font-family:'Oswald',sans-serif;
+    letter-spacing:0.08em;font-size:12px;
+    transform:rotate(-3deg);
+  }
+
+  /* ===== image perfection ===== */
+  .cover-hero{
+    margin-top:36px;
+    border:1.5px solid var(--ink);
+    background:var(--paper-light);
+    padding:0;
+    overflow:hidden;
+    max-width:820px;
+  }
+  .cover-hero img{width:100%;height:auto;display:block;filter:grayscale(8%) contrast(1.05);}
+  .cover-hero-cap{
+    display:flex;justify-content:space-between;gap:10px;
+    padding:9px 14px;
+    font-size:11px;letter-spacing:0.06em;color:var(--ink-soft);
+    border-top:1px solid var(--rule);
+    background:var(--paper);
+  }
+  .workout-diagram{
+    margin:18px 0 14px 0;
+    border:1px solid var(--rule);
+    background:var(--paper-light);
+    padding:8px;
+  }
+  .workout-diagram img{width:100%;height:auto;display:block;}
+  .nutrition-visual{
+    margin:10px 0 18px 0;
+    border:1px solid var(--rule);
+    background:var(--paper-light);
+    padding:8px;
+    max-width:520px;
+  }
+  .nutrition-visual img{width:100%;height:auto;display:block;}
+
+  /* variant badge on reused photos */
+  .exphoto .variant{
+    position:absolute;bottom:4px;left:4px;
+    background:var(--ink);color:var(--paper-light);
+    font-family:'Oswald',sans-serif;font-size:8.5px;letter-spacing:0.07em;
+    padding:2px 5px;line-height:1;
+  }
+  .exphoto{cursor:zoom-in;}
+  .exphoto:hover img{transform:scale(1.04);}
+  .exphoto img{transition:transform .25s ease;}
+
+  /* lightbox */
+  .lightbox{
+    position:fixed;inset:0;background:rgba(32,29,23,0.88);
+    display:none;align-items:center;justify-content:center;
+    z-index:9999;padding:24px;
+  }
+  .lightbox.open{display:flex;}
+  .lightbox img{
+    max-width:92vw;max-height:88vh;
+    border:3px solid var(--paper-light);
+    box-shadow:0 12px 40px rgba(0,0,0,0.5);
+  }
+  .lightbox .close{
+    position:absolute;top:18px;right:22px;
+    color:var(--paper-light);font-size:28px;cursor:pointer;
+    font-family:'IBM Plex Mono',monospace;line-height:1;
+  }
+  .lightbox .cap{
+    position:absolute;bottom:18px;left:50%;transform:translateX(-50%);
+    color:var(--paper-light);font-size:12px;letter-spacing:0.05em;
+    background:rgba(0,0,0,0.5);padding:6px 10px;
+  }
+
+  footer{
+    padding:28px 60px;
+    font-size:11px;color:var(--ink-soft);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  }
+
+  @media(max-width:900px){
+    .rail{display:none;}
+    .cover, section{padding:44px 24px;}
+    .rules-wrap{padding:44px 24px;}
+    .stamp{width:110px;height:110px;font-size:12px;top:30px;right:24px;}
+    .sec-tag{margin-left:0;}
+  }
+
+  @media print{
+    .rail, .lightbox, .stamp, .stamp2{display:none !important;}
+    body{background:#fff;}
+    .shell{display:block;}
+    .cover, section{break-inside:avoid; padding:28px 18px;}
+    .exguide{grid-template-columns:repeat(4,1fr);}
+    .exphoto img{filter:none !important; transform:none !important;}
+    .phase-grid{grid-template-columns:repeat(3,1fr);}
+    a{color:inherit; text-decoration:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="shell">
+
+  <!-- ===== sticky rail nav ===== -->
+  <nav class="rail" id="rail">
+    <div class="rail-title">Field Manual / Index</div>
+    <a href="#overview"><span class="rail-num">00</span>Overview</a>
+    <a href="#workout-a"><span class="rail-num">01</span>Upper Body + Core</a>
+    <a href="#workout-b"><span class="rail-num">02</span>Legs</a>
+    <a href="#workout-c"><span class="rail-num">03</span>Full Body Challenge</a>
+    <a href="#recovery"><span class="rail-num">04</span>Active Recovery</a>
+    <a href="#hair"><span class="rail-num">05</span>Hair Maintenance</a>
+    <a href="#skin"><span class="rail-num">06</span>Skincare</a>
+    <a href="#nutrition"><span class="rail-num">07</span>Nutrition</a>
+    <a href="#sleep"><span class="rail-num">08</span>Sleep + Recovery</a>
+    <a href="#progression"><span class="rail-num">09</span>12-Week Progression</a>
+    <a href="#checklist"><span class="rail-num">10</span>Daily Checklist</a>
+    <a href="#tracker"><span class="rail-num">11</span>Progress Tracker</a>
+    <a href="#rules"><span class="rail-num">12</span>Final Rules</a>
+    <a href="system-monitor.html" target="_blank" rel="noopener"><span class="rail-num">●</span>Live Monitor</a>
+    <a href="#credits"><span class="rail-num">©</span>Credits</a>
+  </nav>
+
+  <div class="main">
+
+    <!-- ===== cover ===== -->
+    <header class="cover" id="overview">
+      <div class="cover-eyebrow">FIELD MANUAL — ISSUED FOR HOME USE — NO EQUIPMENT REQUIRED</div>
+      <h1>The Complete<br>Home Transformation<span> System</span></h1>
+      <p class="cover-sub">Body, face, and hair — one plan, twelve weeks, seven days a week. No gym, no shortcuts, no zero days. Start Monday. Come back in two weeks with your numbers.</p>
+      <div class="stamp">12 WEEK<br>PROTOCOL<br>★ ★ ★</div>
+      <div class="cover-stats">
+        <div class="cover-stat"><b>6</b><span>TRAINING DAYS / WEEK</span></div>
+        <div class="cover-stat"><b>3</b><span>WORKOUT PROTOCOLS</span></div>
+        <div class="cover-stat"><b>12</b><span>WEEKS TO COMPLETION</span></div>
+        <div class="cover-stat"><b>0</b><span>PIECES OF EQUIPMENT</span></div>
+      </div>
+
+      <figure class="cover-hero">
+        <img src="images/cover-hero.svg" alt="Full body targeting schematic — Field Manual Diagram #01" loading="eager" width="800" height="400">
+        <figcaption class="cover-hero-cap"><span>DIAGRAM #01 — FULL BODY TARGETING SCHEMATIC</span><span>NO EQUIPMENT · HOME ISSUE</span></figcaption>
+      </figure>
+
+      <div class="setup-note">
+        <b>Setup — add your own reference photos</b>
+        Next to this HTML file, create a folder named <code>images</code> and drop a photo into it for each movement, using these exact filenames. Until a file is present, the manual falls back to its line-art icon automatically.
+        <div class="setup-files">
+          <span>pushup.jpg</span><span>pike.jpg</span><span>dip.jpg</span><span>plank.jpg</span><span>sideplank.jpg</span><span>bicycle.jpg</span><span>superman.jpg</span>
+          <span>squat.jpg</span><span>lunge.jpg</span><span>bridge.jpg</span><span>calf.jpg</span><span>wallsit.jpg</span><span>jumpsquat.jpg</span><span>burpee.jpg</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== Workout A ===== -->
+    <section id="workout-a">
+      <div class="sec-head"><div class="sec-num">01</div><h2>Workout A — Upper Body + Core</h2></div>
+      <div class="sec-tag">Monday &amp; Thursday · 40 min · High intensity</div>
+
+      <div class="warmup"><b>Warm-Up — 5 min</b>
+        <ul>
+          <li>Arm circles forward — 30 sec</li>
+          <li>Arm circles backward — 30 sec</li>
+          <li>Shoulder shrugs — 20 reps</li>
+          <li>Cat-cow stretch — 10 reps</li>
+          <li>Jumping jacks — 1 min</li>
+        </ul>
+      </div>
+
+      <figure class="workout-diagram"><img src="images/workout-a.svg" alt="Workout A visual system — upper body and core targets" loading="lazy"><figcaption class="cover-hero-cap"><span>WORKOUT A — VISUAL SYSTEM</span><span>CHEST · DELTS · TRICEPS · CORE</span></figcaption></figure>
+
+      <div class="exguide-label">Movement Reference — tap to enlarge</div>
+      <div class="exguide">
+        <div class="exguide-card"><div class="exphoto"><img src="images/pushup.jpg" alt="Standard push-up — hands shoulder width, body rigid" loading="lazy" style="object-position:center 38%" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="pushup"></span><span class="variant">STD</span></div><span>Standard<br>Push-up</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/pushup.jpg" alt="Diamond push-up — hands together forming diamond under chest" loading="lazy" style="object-position:center 38%" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="pushup"></span><span class="variant">DIAMOND</span></div><span>Diamond<br>Push-up</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/pushup.jpg" alt="Wide push-up — hands beyond shoulder width, elbows 45°" loading="lazy" style="object-position:center 38%" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="pushup"></span><span class="variant">WIDE</span></div><span>Wide<br>Push-up</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/dip.jpg" alt="Chair dip — shoulders back, elbows bend to 90°" loading="lazy" style="object-position:center 35%" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="dip"></span><span class="variant">90°</span></div><span>Chair<br>Dip</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/pike.jpg" alt="Pike push-up — hips high, inverted V, head to floor" loading="lazy" style="object-position:center 30%" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="pike"></span></div><span>Pike<br>Push-up</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/pushup.jpg" alt="Incline push-up — hands elevated on chair, easier leverage" loading="lazy" style="object-position:center 38%" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="pushup"></span><span class="variant">INCLINE</span></div><span>Incline<br>Push-up</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/plank.jpg" alt="Plank hold — forearms on floor, body straight" loading="lazy" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="plank"></span></div><span>Plank<br>Hold</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/sideplank.jpg" alt="Side plank — stacked feet, hips lifted" loading="lazy" style="object-position:center 20%" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="sideplank"></span></div><span>Side<br>Plank</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/bicycle.jpg" alt="Bicycle crunch — alternating elbow to knee" loading="lazy" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="bicycle"></span></div><span>Bicycle<br>Crunch</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/superman.jpg" alt="Superman hold — lift arms and legs off floor" loading="lazy" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="superman"></span></div><span>Superman<br>Hold</span></div>
+      </div>
+
+      <table>
+        <caption>Main Workout</caption>
+        <thead><tr><th>#</th><th>Exercise</th><th>Sets</th><th>Reps</th><th>Tempo</th><th>Rest</th></tr></thead>
+        <tbody>
+           <tr><td>1</td><td>Standard Push-ups</td><td>4</td><td>12–15</td><td>2 sec down, 1 up</td><td>60 sec</td></tr>
+           <tr><td>2</td><td>Diamond Push-ups</td><td>3</td><td>8–12</td><td>2 sec down, 1 up</td><td>60 sec</td></tr>
+           <tr><td>3</td><td>Wide Push-ups</td><td>3</td><td>10–12</td><td>2 sec down, 1 up</td><td>60 sec</td></tr>
+           <tr><td>4</td><td>Chair Dips</td><td>3</td><td>12–15</td><td>2 sec down, 1 up</td><td>60 sec</td></tr>
+           <tr><td>5</td><td>Pike Push-ups</td><td>3</td><td>8–10</td><td>2 sec down, 1 up</td><td>90 sec</td></tr>
+           <tr><td>6</td><td>Incline Push-ups (hands on chair)</td><td>2</td><td>15</td><td>Normal</td><td>45 sec</td></tr>
+           <tr><td>7</td><td>Plank Hold</td><td>3</td><td>45–60 sec</td><td>Hold</td><td>45 sec</td></tr>
+           <tr><td>8</td><td>Side Plank (each side)</td><td>2</td><td>20–30 sec</td><td>Hold</td><td>30 sec</td></tr>
+           <tr><td>9</td><td>Bicycle Crunches</td><td>3</td><td>20 each side</td><td>Controlled</td><td>45 sec</td></tr>
+           <tr><td>10</td><td>Superman Hold</td><td>3</td><td>20 sec</td><td>Hold</td><td>45 sec</td></tr>
+        </tbody>
+      </table>
+
+      <div class="cooldown"><b>Cool-Down — 5 min</b>
+        <ul>
+          <li>Doorway chest stretch — 30 sec each side</li>
+          <li>Cross-body shoulder stretch — 30 sec each arm</li>
+          <li>Tricep overhead stretch — 30 sec each arm</li>
+          <li>Child's pose — 1 min</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Workout B ===== -->
+    <section id="workout-b">
+      <div class="sec-head"><div class="sec-num">02</div><h2>Workout B — Legs (Dedicated)</h2></div>
+      <div class="sec-tag">Tuesday &amp; Friday · 40 min · High intensity</div>
+
+      <div class="warmup"><b>Warm-Up — 5 min</b>
+        <ul>
+          <li>Leg swings forward/back — 10 each leg</li>
+          <li>Leg swings side to side — 10 each leg</li>
+          <li>Bodyweight squats — 15 reps</li>
+          <li>High knees — 1 min</li>
+          <li>Ankle circles — 10 each ankle</li>
+        </ul>
+      </div>
+
+      <figure class="workout-diagram"><img src="images/workout-b.svg" alt="Workout B visual system — legs and lower body" loading="lazy"><figcaption class="cover-hero-cap"><span>WORKOUT B — VISUAL SYSTEM</span><span>QUADS · GLUTES · HAMSTRINGS · CALVES</span></figcaption></figure>
+
+      <div class="exguide-label">Movement Reference — tap to enlarge</div>
+      <div class="exguide">
+        <div class="exguide-card"><div class="exphoto"><img src="images/squat.jpg" alt="Bodyweight squat — feet shoulder width, thighs parallel" loading="lazy" style="object-position:center 40%" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="squat"></span><span class="variant">STD</span></div><span>Bodyweight<br>Squat</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/squat.jpg" alt="Sumo squat — wide stance, toes out, deep sit" loading="lazy" style="object-position:center 40%" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="squat"></span><span class="variant">SUMO</span></div><span>Sumo<br>Squat</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/lunge.jpg" alt="Bulgarian split squat — rear foot elevated" loading="lazy" style="object-position:center 32%" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="lunge"></span><span class="variant">REAR UP</span></div><span>Bulgarian<br>Split Squat</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/lunge.jpg" alt="Walking lunge — step forward, 90° knees" loading="lazy" style="object-position:center 32%" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="lunge"></span><span class="variant">FWD</span></div><span>Walking<br>Lunge</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/lunge.jpg" alt="Reverse lunge — step backward, controlled descent" loading="lazy" style="object-position:center 32%" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="lunge"></span><span class="variant">REV</span></div><span>Reverse<br>Lunge</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/bridge.jpg" alt="Glute bridge — hips thrust, shoulders on floor" loading="lazy" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="bridge"></span></div><span>Glute<br>Bridge</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/calf.jpg" alt="Calf raise — rise on balls of feet, pause" loading="lazy" style="object-position:center top" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="calf"></span></div><span>Calf<br>Raise</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/wallsit.jpg" alt="Wall sit — back flat, thighs parallel to floor" loading="lazy" style="object-position:center 35%" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="wallsit"></span></div><span>Wall<br>Sit</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/jumpsquat.jpg" alt="Jump squat — deep squat then explosive jump" loading="lazy" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="jumpsquat"></span></div><span>Jump<br>Squat</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/lunge.jpg" alt="Lateral lunge — side step, sit hips back" loading="lazy" style="object-position:center 32%" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="lunge"></span><span class="variant">SIDE</span></div><span>Lateral<br>Lunge</span></div>
+      </div>
+
+      <table>
+        <caption>Main Workout</caption>
+        <thead><tr><th>#</th><th>Exercise</th><th>Sets</th><th>Reps</th><th>Tempo</th><th>Rest</th></tr></thead>
+        <tbody>
+           <tr><td>1</td><td>Bodyweight Squats</td><td>4</td><td>20</td><td>3 sec down, 1 up</td><td>60 sec</td></tr>
+           <tr><td>2</td><td>Sumo Squats</td><td>3</td><td>15</td><td>2 sec down, 1 up</td><td>60 sec</td></tr>
+           <tr><td>3</td><td>Bulgarian Split Squats</td><td>3</td><td>12 each leg</td><td>2 sec down, 1 up</td><td>60 sec</td></tr>
+           <tr><td>4</td><td>Walking Lunges</td><td>3</td><td>14 each leg</td><td>Normal</td><td>60 sec</td></tr>
+           <tr><td>5</td><td>Reverse Lunges</td><td>3</td><td>12 each leg</td><td>Controlled</td><td>60 sec</td></tr>
+           <tr><td>6</td><td>Single-Leg Glute Bridge</td><td>3</td><td>12 each leg</td><td>Hold 1 sec top</td><td>45 sec</td></tr>
+           <tr><td>7</td><td>Calf Raises (on step/edge)</td><td>4</td><td>20</td><td>2 sec up, 2 sec down</td><td>45 sec</td></tr>
+           <tr><td>8</td><td>Wall Sit</td><td>3</td><td>45–60 sec</td><td>Hold</td><td>60 sec</td></tr>
+           <tr><td>9</td><td>Jump Squats</td><td>3</td><td>10</td><td>Explosive</td><td>90 sec</td></tr>
+           <tr><td>10</td><td>Lateral Lunges</td><td>3</td><td>10 each side</td><td>Controlled</td><td>60 sec</td></tr>
+        </tbody>
+      </table>
+
+      <div class="cooldown"><b>Cool-Down — 5 min</b>
+        <ul>
+          <li>Quad stretch (standing) — 30 sec each leg</li>
+          <li>Hamstring stretch (seated) — 30 sec each leg</li>
+          <li>Figure-four glute stretch — 30 sec each side</li>
+          <li>Calf stretch against wall — 30 sec each leg</li>
+          <li>Pigeon pose — 30 sec each side</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Workout C ===== -->
+    <section id="workout-c">
+      <div class="sec-head"><div class="sec-num">03</div><h2>Workout C — Full Body Challenge</h2></div>
+      <div class="sec-tag">Saturday · 30 min · Max effort — circuit format</div>
+      <p style="font-size:13px;color:var(--ink-soft);max-width:600px;margin-top:0;">Perform as a circuit. Complete all 10 exercises back to back, rest 2 minutes, repeat 3–5 rounds.</p>
+
+      <figure class="workout-diagram"><img src="images/workout-c.svg" alt="Workout C circuit — full body challenge sequence" loading="lazy"><figcaption class="cover-hero-cap"><span>WORKOUT C — CIRCUIT SYSTEM</span><span>3–5 ROUNDS · 2 MIN REST · MAX EFFORT</span></figcaption></figure>
+
+      <div class="exguide-label">Movement Reference — tap to enlarge</div>
+      <div class="exguide">
+        <div class="exguide-card"><div class="exphoto"><img src="images/pushup.jpg" alt="Push-up — chest to floor, full extension" loading="lazy" style="object-position:center 38%" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="pushup"></span><span class="variant">15×</span></div><span>Push-up</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/squat.jpg" alt="Bodyweight squat — deep, knees tracking over toes" loading="lazy" style="object-position:center 40%" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="squat"></span><span class="variant">20×</span></div><span>Bodyweight<br>Squat</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/plank.jpg" alt="Plank — brace core, glutes tight" loading="lazy" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="plank"></span><span class="variant">45s</span></div><span>Plank</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/lunge.jpg" alt="Bulgarian split squat — rear foot elevated" loading="lazy" style="object-position:center 32%" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="lunge"></span><span class="variant">10/leg</span></div><span>Bulgarian<br>Split Squat</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/pushup.jpg" alt="Diamond push-up — hands forming diamond" loading="lazy" style="object-position:center 38%" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="pushup"></span><span class="variant">10×</span></div><span>Diamond<br>Push-up</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/jumpsquat.jpg" alt="Jump squat — explosive vertical" loading="lazy" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="jumpsquat"></span><span class="variant">10×</span></div><span>Jump<br>Squat</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/dip.jpg" alt="Chair dip — chest up, elbows back" loading="lazy" style="object-position:center 35%" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="dip"></span><span class="variant">12×</span></div><span>Chair<br>Dip</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/lunge.jpg" alt="Walking lunge — alternating forward steps" loading="lazy" style="object-position:center 32%" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="lunge"></span><span class="variant">10/leg</span></div><span>Walking<br>Lunge</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/bicycle.jpg" alt="Bicycle crunch — rotation hits obliques" loading="lazy" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="bicycle"></span><span class="variant">20/side</span></div><span>Bicycle<br>Crunch</span></div>
+        <div class="exguide-card"><div class="exphoto"><img src="images/burpee.jpg" alt="Burpee — squat, kick back, push-up, jump" loading="lazy" style="object-position:center 22%" onerror="this.parentElement.classList.add('noimg')"><span class="exicon" data-icon="burpee"></span><span class="variant">8×</span></div><span>Burpee</span></div>
+      </div>
+
+      <table>
+        <thead><tr><th>#</th><th>Exercise</th><th>Reps</th></tr></thead>
+        <tbody>
+           <tr><td>1</td><td>Push-ups</td><td>15</td></tr>
+           <tr><td>2</td><td>Bodyweight Squats</td><td>20</td></tr>
+           <tr><td>3</td><td>Plank</td><td>45 sec</td></tr>
+           <tr><td>4</td><td>Bulgarian Split Squats</td><td>10 each leg</td></tr>
+           <tr><td>5</td><td>Diamond Push-ups</td><td>10</td></tr>
+           <tr><td>6</td><td>Jump Squats</td><td>10</td></tr>
+           <tr><td>7</td><td>Chair Dips</td><td>12</td></tr>
+           <tr><td>8</td><td>Walking Lunges</td><td>10 each leg</td></tr>
+           <tr><td>9</td><td>Bicycle Crunches</td><td>20 each side</td></tr>
+           <tr><td>10</td><td>Burpees</td><td>8</td></tr>
+        </tbody>
+      </table>
+      <div class="note-strip">Track your total time for the circuit. Beat it next week.</div>
+    </section>
+
+    <!-- ===== Recovery ===== -->
+    <section id="recovery">
+      <div class="sec-head"><div class="sec-num">04</div><h2>Active Recovery &amp; Mobility</h2></div>
+      <div class="sec-tag">Wednesday · 20 min</div>
+      <table>
+        <thead><tr><th>Activity</th><th>Duration</th></tr></thead>
+        <tbody>
+          <tr><td>Light walking or stretching</td><td>5 min</td></tr>
+          <tr><td>Hip circles — 10 each direction</td><td>2 min</td></tr>
+          <tr><td>Deep squat hold — 3 × 30 sec</td><td>3 min</td></tr>
+          <tr><td>Cat-cow — 15 reps</td><td>2 min</td></tr>
+          <tr><td>Child's pose</td><td>1 min</td></tr>
+          <tr><td>Cobra stretch</td><td>1 min</td></tr>
+          <tr><td>Neck rolls — 10 each direction</td><td>2 min</td></tr>
+          <tr><td>Shoulder pass-through (towel) — 15 reps</td><td>2 min</td></tr>
+          <tr><td>Foam rolling or self-massage (if available)</td><td>2 min</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== Hair ===== -->
+    <section id="hair">
+      <div class="sec-head"><div class="sec-num">05</div><h2>Hair Maintenance Routine</h2></div>
+      <div class="sec-tag">Natural / textured hair care</div>
+
+      <div class="two-col">
+        <div>
+          <table>
+            <caption>Daily Habits</caption>
+            <thead><tr><th>Action</th><th>How</th></tr></thead>
+            <tbody>
+              <tr><td>Moisturize</td><td>Light spray, water + a few drops of coconut oil</td></tr>
+              <tr><td>Scalp massage</td><td>5 min before bed, stimulate blood flow</td></tr>
+              <tr><td>Protect at night</td><td>Satin bonnet or pillowcase</td></tr>
+            </tbody>
+          </table>
+          <table>
+            <caption>Weekly Routine</caption>
+            <thead><tr><th>Day</th><th>Task</th></tr></thead>
+            <tbody>
+              <tr><td>Sunday</td><td>Deep wash day</td></tr>
+              <tr><td>Wednesday</td><td>Light moisturizing + scalp massage</td></tr>
+              <tr><td>Daily</td><td>Scalp massage before bed (5 min)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <table>
+            <caption>Wash Day (Sunday)</caption>
+            <thead><tr><th>Step</th><th>Action</th><th>Time</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Pre-detangle with fingers or wide-tooth comb</td><td>5 min</td></tr>
+              <tr><td>2</td><td>Sulfate-free shampoo, scalp only</td><td>Massage 3 min</td></tr>
+              <tr><td>3</td><td>Rinse thoroughly, warm water</td><td>2 min</td></tr>
+              <tr><td>4</td><td>Conditioner, mid-length to ends</td><td>Leave 5–10 min</td></tr>
+              <tr><td>5</td><td>Rinse with cool water (seals cuticle)</td><td>2 min</td></tr>
+              <tr><td>6</td><td>Leave-in conditioner or moisturizing cream</td><td>—</td></tr>
+              <tr><td>7</td><td>Seal with oil (coconut, castor, or olive)</td><td>—</td></tr>
+              <tr><td>8</td><td>Style as desired or air dry</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <table>
+        <caption>Products to Use</caption>
+        <thead><tr><th>Product</th><th>Purpose</th><th>When</th></tr></thead>
+        <tbody>
+          <tr><td>Sulfate-free shampoo</td><td>Gentle cleansing</td><td>Wash day</td></tr>
+          <tr><td>Conditioner</td><td>Moisture + detangling</td><td>Wash day</td></tr>
+          <tr><td>Leave-in conditioner</td><td>Daily moisture</td><td>After wash</td></tr>
+          <tr><td>Coconut / castor oil</td><td>Seal moisture, promote growth</td><td>After wash + daily</td></tr>
+          <tr><td>Satin bonnet</td><td>Prevent breakage while sleeping</td><td>Every night</td></tr>
+        </tbody>
+      </table>
+
+      <ul class="tip-list">
+        <li><b>Scalp massage</b> — 5–10 min daily increases blood flow to follicles.</li>
+        <li><b>Avoid heat</b> — no blow dryers or straighteners.</li>
+        <li><b>Trim every 8–12 weeks</b> — removes split ends, prevents breakage.</li>
+        <li><b>Eat protein</b> — hair is made of keratin.</li>
+        <li><b>Stay hydrated</b> — dry hair is brittle hair.</li>
+        <li><b>Protect edges</b> — avoid tight styles that pull on the hairline.</li>
+      </ul>
+
+      <table style="margin-top:24px;">
+        <caption>Quick Style Ideas</caption>
+        <thead><tr><th>Style</th><th>How</th></tr></thead>
+        <tbody>
+          <tr><td>Twist-out</td><td>Twist damp hair, unravel when dry for defined curls</td></tr>
+          <tr><td>Finger coils</td><td>Coil small sections with gel for a defined look</td></tr>
+          <tr><td>Low puff</td><td>Gather hair back with a soft band, leave edges loose</td></tr>
+          <tr><td>Free flow</td><td>Let it grow naturally, shape with fingers</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== Skincare ===== -->
+    <section id="skin">
+      <div class="sec-head"><div class="sec-num">06</div><h2>Skincare Routine</h2></div>
+      <div class="sec-tag">Daily AM/PM + weekly treatment</div>
+
+      <table>
+        <caption>Daily Routine</caption>
+        <thead><tr><th>Time</th><th>Step</th><th>Product / Method</th></tr></thead>
+        <tbody>
+          <tr><td>Morning</td><td>Cleanse</td><td>Gentle face wash with warm water</td></tr>
+          <tr><td>Morning</td><td>Moisturize</td><td>Lightweight moisturizer</td></tr>
+          <tr><td>Morning</td><td>Protect</td><td>SPF 30+ if going outside</td></tr>
+          <tr><td>Night</td><td>Cleanse</td><td>Face wash to remove dirt</td></tr>
+          <tr><td>Night</td><td>Moisturize</td><td>Hydrating night cream or aloe vera</td></tr>
+          <tr><td>Night</td><td>Lip care</td><td>Lip balm before sleep</td></tr>
+        </tbody>
+      </table>
+
+      <table>
+        <caption>Weekly (Wednesday — alongside active recovery)</caption>
+        <thead><tr><th>Step</th><th>Method</th></tr></thead>
+        <tbody>
+          <tr><td>Exfoliate</td><td>Gentle scrub or sugar + honey mix (5 min)</td></tr>
+          <tr><td>Face mask</td><td>Honey + turmeric or aloe vera (15 min)</td></tr>
+          <tr><td>Tone</td><td>Rose water or natural toner</td></tr>
+        </tbody>
+      </table>
+
+      <ul class="tip-list">
+        <li><b>Drink 3 liters of water daily</b> — clear skin starts from inside.</li>
+        <li><b>Don't touch your face</b> — prevents bacteria transfer.</li>
+        <li><b>Change pillowcase weekly</b> — reduces breakouts.</li>
+        <li><b>Eat fruits and vegetables</b> — vitamins A, C, E improve skin.</li>
+        <li><b>Sleep 7–8 hours</b> — skin repairs during deep sleep.</li>
+      </ul>
+    </section>
+
+    <!-- ===== Nutrition ===== -->
+    <section id="nutrition">
+      <div class="sec-head"><div class="sec-num">07</div><h2>Nutrition Plan</h2></div>
+      <div class="sec-tag">Fuel the system — daily targets and meal plan</div>
+
+      <figure class="nutrition-visual"><img src="images/nutrition-plate.svg" alt="Macronutrient distribution — protein carbs fats plate" loading="lazy"><figcaption class="cover-hero-cap" style="border-top:1px solid var(--rule);margin:0 -8px -8px -8px;">MACRO PLATE · 2,400–2,800 KCAL TARGET</figcaption></figure>
+
+      <table>
+        <caption>Daily Targets</caption>
+        <thead><tr><th>Macro</th><th>Target</th></tr></thead>
+        <tbody>
+          <tr><td>Calories</td><td>2,400–2,800 kcal</td></tr>
+          <tr><td>Protein</td><td>100–120 g</td></tr>
+          <tr><td>Carbs</td><td>300–350 g</td></tr>
+          <tr><td>Fats</td><td>70–90 g</td></tr>
+          <tr><td>Water</td><td>3–4 liters</td></tr>
+        </tbody>
+      </table>
+
+      <table>
+        <caption>Meal Plan</caption>
+        <thead><tr><th>Meal</th><th>Time</th><th>Food</th><th>Calories</th></tr></thead>
+        <tbody>
+          <tr><td>Breakfast</td><td>7–8 AM</td><td>4 eggs + 2 bread + 1 banana + milk</td><td>~600</td></tr>
+          <tr><td>Snack</td><td>10 AM</td><td>Groundnuts (handful) + banana</td><td>~300</td></tr>
+          <tr><td>Lunch</td><td>1 PM</td><td>Rice + beans + chicken/fish + vegetable</td><td>~700</td></tr>
+          <tr><td>Snack</td><td>4 PM</td><td>Peanut butter sandwich + milk</td><td>~400</td></tr>
+          <tr><td>Dinner</td><td>7–8 PM</td><td>Yam/potato + egg stew + salad</td><td>~600</td></tr>
+          <tr><td>Before bed</td><td>9–10 PM</td><td>Glass of milk + 2 eggs (boiled)</td><td>~300</td></tr>
+        </tbody>
+      </table>
+
+      <div class="two-col">
+        <table>
+          <caption>Protein Sources (Affordable)</caption>
+          <thead><tr><th>Food</th><th>Protein / serving</th></tr></thead>
+          <tbody>
+            <tr><td>Eggs (1 large)</td><td>6 g</td></tr>
+            <tr><td>Chicken (100 g)</td><td>25 g</td></tr>
+            <tr><td>Fish (100 g)</td><td>20 g</td></tr>
+            <tr><td>Beans (1 cup cooked)</td><td>15 g</td></tr>
+            <tr><td>Groundnuts (1 handful)</td><td>7 g</td></tr>
+            <tr><td>Milk (1 cup)</td><td>8 g</td></tr>
+            <tr><td>Peanut butter (2 tbsp)</td><td>8 g</td></tr>
+          </tbody>
+        </table>
+        <table>
+          <caption>Hydration Schedule</caption>
+          <thead><tr><th>Time</th><th>Amount</th></tr></thead>
+          <tbody>
+            <tr><td>Wake up</td><td>1 glass</td></tr>
+            <tr><td>Before each meal</td><td>1 glass</td></tr>
+            <tr><td>During workout</td><td>500 ml</td></tr>
+            <tr><td>Before bed</td><td>1 glass</td></tr>
+            <tr style="font-weight:600;"><td>Total</td><td>3–4 liters</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== Sleep ===== -->
+    <section id="sleep">
+      <div class="sec-head"><div class="sec-num">08</div><h2>Sleep &amp; Recovery</h2></div>
+      <div class="sec-tag">Muscles grow at night, not in the workout</div>
+
+      <table>
+        <caption>Sleep Schedule</caption>
+        <thead><tr><th>Parameter</th><th>Target</th></tr></thead>
+        <tbody>
+          <tr><td>Bedtime</td><td>10–11 PM</td></tr>
+          <tr><td>Wake time</td><td>6–7 AM</td></tr>
+          <tr><td>Total</td><td>7–8 hours</td></tr>
+        </tbody>
+      </table>
+
+      <ul class="tip-list">
+        <li>No screens 30 min before bed.</li>
+        <li>Room should be cool and dark.</li>
+        <li>Same bedtime every night.</li>
+        <li>No caffeine after 2 PM.</li>
+        <li>Light stretching before bed.</li>
+      </ul>
+    </section>
+
+    <!-- ===== Progression ===== -->
+    <section id="progression">
+      <div class="sec-head"><div class="sec-num">09</div><h2>12-Week Progression</h2></div>
+      <div class="sec-tag">Three phases — foundation, growth, intensity</div>
+
+      <div class="phase-grid">
+        <div class="phase-card" data-phase="PHASE 1 · WEEKS 1–4">
+          <h3>Foundation</h3>
+          <p>Weeks 1–2: 3 sets/exercise, 60 sec rest. Weeks 3–4: 3–4 sets/exercise, 50 sec rest.</p>
+          <table>
+            <tbody>
+              <tr><td>Learn all exercises</td><td>Perfect form</td></tr>
+              <tr><td>Build habit</td><td>Don't miss workouts</td></tr>
+              <tr><td>Eat consistently</td><td>Hit calories daily</td></tr>
+              <tr><td>Hair routine</td><td>Establish wash day</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="phase-card" data-phase="PHASE 2 · WEEKS 5–8">
+          <h3>Growth</h3>
+          <p>Weeks 5–6: 4 sets, 45 sec rest, slower tempo. Weeks 7–8: 4–5 sets, 40 sec rest, harder variations.</p>
+          <table>
+            <tbody>
+              <tr><td>Add volume</td><td>4 sets every exercise</td></tr>
+              <tr><td>Increase reps</td><td>+3–5 reps / set</td></tr>
+              <tr><td>Reduce rest</td><td>45 sec between sets</td></tr>
+              <tr><td>Hair growth</td><td>Visible moisture improvement</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="phase-card" data-phase="PHASE 3 · WEEKS 9–12">
+          <h3>Intensity</h3>
+          <p>Weeks 9–10: 5 sets, 30 sec rest, weighted where possible. Weeks 11–12: max effort, test all exercises.</p>
+          <table>
+            <tbody>
+              <tr><td>Advanced variations</td><td>One-arm push-up prep, pistol squats</td></tr>
+              <tr><td>Weighted exercises</td><td>Backpack with books</td></tr>
+              <tr><td>Circuit training</td><td>Full body challenge, 5 rounds</td></tr>
+              <tr><td>Visible results</td><td>Noticeable muscle + definition</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <table style="margin-top:30px;">
+        <caption>Exercise Progression Chart</caption>
+        <thead><tr><th>Exercise</th><th>Beginner</th><th>Intermediate</th><th>Advanced</th></tr></thead>
+        <tbody>
+          <tr><td>Push-ups</td><td>Standard</td><td>Diamond</td><td>One-arm negatives</td></tr>
+          <tr><td>Squats</td><td>Bodyweight</td><td>Jump squats</td><td>Pistol squats</td></tr>
+          <tr><td>Lunges</td><td>Static</td><td>Walking</td><td>Jumping lunges</td></tr>
+          <tr><td>Plank</td><td>Standard</td><td>Side plank</td><td>Plank to push-up</td></tr>
+          <tr><td>Dips</td><td>Chair</td><td>Feet elevated</td><td>Weighted</td></tr>
+          <tr><td>Calf raises</td><td>Flat floor</td><td>Edge of step</td><td>Single-leg</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== Checklist ===== -->
+    <section id="checklist">
+      <div class="sec-head"><div class="sec-num">10</div><h2>Daily Checklist</h2></div>
+      <div class="sec-tag">Check off every day — progress saves automatically and resets daily. Tap any image above to enlarge.</div>
+
+      <div class="cl-progress" id="clProgress">
+        <span id="clCount">0 / 15 done</span>
+        <div class="bar"><i id="clBar"></i></div>
+        <span class="stamp-approve" id="clStamp">✓ FULL DAY — APPROVED</span>
+      </div>
+
+      <div class="checklist-wrap">
+        <div>
+          <div class="cl-group">
+            <h3>Morning</h3>
+            <div class="cl-item"><div class="cl-box"><span class="mark">✕</span></div><span class="label">Drank 1 glass of water</span></div>
+            <div class="cl-item"><div class="cl-box"><span class="mark">✕</span></div><span class="label">Ate breakfast with protein</span></div>
+            <div class="cl-item"><div class="cl-box"><span class="mark">✕</span></div><span class="label">Applied moisturizer + SPF</span></div>
+          </div>
+          <div class="cl-group">
+            <h3>Training</h3>
+            <div class="cl-item"><div class="cl-box"><span class="mark">✕</span></div><span class="label">Completed today's workout</span></div>
+            <div class="cl-item"><div class="cl-box"><span class="mark">✕</span></div><span class="label">Maintained proper form</span></div>
+            <div class="cl-item"><div class="cl-box"><span class="mark">✕</span></div><span class="label">Drank water during workout</span></div>
+          </div>
+          <div class="cl-group">
+            <h3>Nutrition</h3>
+            <div class="cl-item"><div class="cl-box"><span class="mark">✕</span></div><span class="label">Hit protein goal (100 g+)</span></div>
+            <div class="cl-item"><div class="cl-box"><span class="mark">✕</span></div><span class="label">Ate all meals on schedule</span></div>
+            <div class="cl-item"><div class="cl-box"><span class="mark">✕</span></div><span class="label">Drank 3+ liters of water</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="cl-group">
+            <h3>Hair</h3>
+            <div class="cl-item"><div class="cl-box"><span class="mark">✕</span></div><span class="label">Moisturized hair (if needed)</span></div>
+            <div class="cl-item"><div class="cl-box"><span class="mark">✕</span></div><span class="label">Scalp massage before bed (5 min)</span></div>
+          </div>
+          <div class="cl-group">
+            <h3>Night</h3>
+            <div class="cl-item"><div class="cl-box"><span class="mark">✕</span></div><span class="label">Applied night moisturizer</span></div>
+            <div class="cl-item"><div class="cl-box"><span class="mark">✕</span></div><span class="label">Put on satin bonnet</span></div>
+            <div class="cl-item"><div class="cl-box"><span class="mark">✕</span></div><span class="label">In bed by 11 PM</span></div>
+            <div class="cl-item"><div class="cl-box"><span class="mark">✕</span></div><span class="label">Got 7–8 hours sleep</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Tracker ===== -->
+    <section id="tracker">
+      <div class="sec-head"><div class="sec-num">11</div><h2>Progress Tracker</h2></div>
+      <div class="sec-tag">Every 2 weeks — the mirror lies day to day, photos and numbers don't</div>
+
+      <p class="tracker-note">Take these photos every two weeks, same lighting, same time of day:</p>
+      <div class="photo-row">
+        <div class="photo-chip"><b>Front</b>Standing straight, arms relaxed</div>
+        <div class="photo-chip"><b>Side</b>Profile view</div>
+        <div class="photo-chip"><b>Back</b>Standing straight</div>
+      </div>
+
+      <table>
+        <caption>Body Measurements</caption>
+        <thead><tr><th>Measure</th><th>Wk 0</th><th>Wk 2</th><th>Wk 4</th><th>Wk 6</th><th>Wk 8</th><th>Wk 10</th><th>Wk 12</th></tr></thead>
+        <tbody>
+          <tr><td>Chest</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Waist</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Arms (flexed)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Thighs</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Weight</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="credits" style="padding-top:32px;">
+      <div class="sec-head"><div class="sec-num" style="font-size:11px;">©</div><h2 style="font-size:18px;">Image Credits</h2></div>
+      <div class="sec-tag">All exercise photos freely licensed for personal use — see <code>images/sources.txt</code> for full URLs. Tap any thumbnail to enlarge.</div>
+      <p style="font-size:12.5px;color:var(--ink-soft);line-height:1.7;max-width:680px;">Cover diagram and workout visuals are original SVGs. Photos: Push-up (U.S. Marines, Public Domain), Pike (U.S. Air Force), Dip (Jdoggett CC BY-SA 3.0), Plank/Side Plank (Jaykayfit CC BY-SA 3.0), Bicycle (Tim Cigelske CC BY-SA 2.0), Superman (Nenad Stojkovic CC BY 2.0), Squat (Tokorozawa Namiki CC BY 4.0), Lunge (U.S. Air Force), Bridge (Strenght and Health Science CC BY-NC-ND 2.0), Calf (GeorgeStepanek CC BY-SA 3.0), Wall Sit (sportEX CC BY-ND 2.0), Jump Squat (Sciencereviewer2 CC BY-SA 4.0), Burpee (Travis Isaacs CC BY 2.0). Grayscale/contrast applied for print consistency.</p>
+      <div class="note-strip">Need higher-res? Replace any <code>images/*.jpg</code> — manual auto-falls back to line-art if missing (<code>onerror noimg</code>).</div>
+    </section>
+
+  </div>
+</div>
+
+<!-- ===== final rules (full bleed, off-shell) ===== -->
+<div class="rules-wrap" id="rules">
+  <div class="sec-head"><div class="sec-num">12</div><h2>Final Rules</h2></div>
+  <div class="rule-line"><b class="n">1</b><p><strong>Consistency beats intensity.</strong> Show up every day, even on low-energy days.</p></div>
+  <div class="rule-line"><b class="n">2</b><p><strong>Eat like it's your job.</strong> You won't grow without food.</p></div>
+  <div class="rule-line"><b class="n">3</b><p><strong>Sleep is training.</strong> Muscles grow at night, not in the gym.</p></div>
+  <div class="rule-line"><b class="n">4</b><p><strong>Hair takes time.</strong> 3–6 months to see real growth.</p></div>
+  <div class="rule-line"><b class="n">5</b><p><strong>Be patient.</strong> The mirror lies day to day; photos don't lie month to month.</p></div>
+  <div class="rule-line"><b class="n">6</b><p><strong>No zero days.</strong> Even on rest days, stretch, moisturize, eat well.</p></div>
+  <div class="rule-line"><b class="n">7</b><p><strong>Track everything.</strong> What gets measured gets improved.</p></div>
+
+  <div class="sign-off">
+    This is your complete system. Follow it for 12 weeks and you will see transformation in your body, face, and hair.<br><br>
+    Start this Monday. Come back in 2 weeks and tell me your progress — the plan gets adjusted based on your results.<br><br>
+    Now go eat your eggs and do your push-ups.
+    <div class="stamp2">ISSUED · WEEK 01</div>
+  </div>
+</div>
+
+<footer>
+  <span>THE COMPLETE HOME TRANSFORMATION SYSTEM · <a href="system-monitor.html" target="_blank" rel="noopener" style="text-decoration:underline;">SYSTEM MONITOR</a> · <a href="images/sources.txt" target="_blank" rel="noopener" style="text-decoration:underline;">SOURCES.TXT</a></span>
+  <span>BODY · FACE · HAIR — ONE PLAN, TWELVE WEEKS</span>
+</footer>
+
+<script>
+  // Original line-art pictograms, injected directly (no <use>/href — safest for sandboxed rendering)
+  const ICONS = {
+    pushup: `<svg viewBox="0 0 64 64">
+      <line class="stroke ground" x1="6" y1="47" x2="58" y2="47" stroke-width="2" fill="none"/>
+      <circle class="stroke" cx="15" cy="26" r="5" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M20,29 L46,38" fill="none" stroke-width="3.4"/>
+      <path class="stroke" d="M27,31 L25,47" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M40,36 L44,47" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M46,38 L54,44 L58,47" fill="none" stroke-width="3.2"/>
+      <path class="accent" d="M30,20 Q33,15 37,19" fill="none" stroke-width="2.4" stroke-dasharray="1 4"/>
+    </svg>`,
+    pike: `<svg viewBox="0 0 64 64">
+      <line class="stroke ground" x1="6" y1="47" x2="58" y2="47" stroke-width="2" fill="none"/>
+      <circle class="stroke" cx="30" cy="34" r="5" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M33,38 L26,20" fill="none" stroke-width="3.4"/>
+      <path class="stroke" d="M26,20 L44,14" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M33,38 L46,42 L54,47" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M26,20 L18,30 L14,47" fill="none" stroke-width="3.2"/>
+      <path class="accent" d="M46,10 Q49,16 44,20" fill="none" stroke-width="2.4" stroke-dasharray="1 4"/>
+    </svg>`,
+    dip: `<svg viewBox="0 0 64 64">
+      <line class="stroke ground" x1="30" y1="47" x2="58" y2="47" stroke-width="2" fill="none"/>
+      <rect class="stroke" x="30" y="30" width="16" height="4" fill="none" stroke-width="2.4"/>
+      <circle class="stroke" cx="20" cy="24" r="5" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M20,29 L26,38 L22,47" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M26,38 L34,44 L38,47" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M22,32 L32,32" fill="none" stroke-width="3"/>
+      <path class="accent" d="M14,34 Q10,30 14,26" fill="none" stroke-width="2.4" stroke-dasharray="1 4"/>
+    </svg>`,
+    plank: `<svg viewBox="0 0 64 64">
+      <line class="stroke ground" x1="6" y1="46" x2="58" y2="46" stroke-width="2" fill="none"/>
+      <circle class="stroke" cx="14" cy="28" r="5" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M19,31 L47,38" fill="none" stroke-width="3.6"/>
+      <path class="stroke" d="M23,33 L21,46" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M47,38 L48,46" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M47,38 L54,46" fill="none" stroke-width="3.2"/>
+    </svg>`,
+    sideplank: `<svg viewBox="0 0 64 64">
+      <line class="stroke ground" x1="6" y1="44" x2="58" y2="44" stroke-width="2" fill="none"/>
+      <circle class="stroke" cx="16" cy="26" r="5" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M20,29 L44,36" fill="none" stroke-width="3.6"/>
+      <path class="stroke" d="M25,31 L23,44" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M44,36 L50,44" fill="none" stroke-width="3.2"/>
+      <path class="accent" d="M30,26 L37,15" fill="none" stroke-width="3"/>
+    </svg>`,
+    bicycle: `<svg viewBox="0 0 64 64">
+      <line class="stroke ground" x1="6" y1="47" x2="58" y2="47" stroke-width="2" fill="none"/>
+      <circle class="stroke" cx="14" cy="30" r="5" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M19,33 L34,40" fill="none" stroke-width="3.4"/>
+      <path class="accent" d="M24,34 L32,26" fill="none" stroke-width="2.6"/>
+      <path class="stroke" d="M34,40 L38,32 L46,30" fill="none" stroke-width="3"/>
+      <path class="stroke" d="M34,40 L44,44 L50,38" fill="none" stroke-width="3"/>
+    </svg>`,
+    superman: `<svg viewBox="0 0 64 64">
+      <line class="stroke ground" x1="6" y1="42" x2="58" y2="42" stroke-width="2" fill="none"/>
+      <circle class="stroke" cx="14" cy="35" r="5" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M19,36 L46,30" fill="none" stroke-width="3.6"/>
+      <path class="stroke" d="M25,35 L14,26" fill="none" stroke-width="3"/>
+      <path class="stroke" d="M46,30 L58,25" fill="none" stroke-width="3"/>
+      <path class="accent" d="M8,24 Q11,20 15,22" fill="none" stroke-width="2.2" stroke-dasharray="1 4"/>
+    </svg>`,
+    squat: `<svg viewBox="0 0 64 64">
+      <line class="stroke ground" x1="6" y1="50" x2="58" y2="50" stroke-width="2" fill="none"/>
+      <circle class="stroke" cx="30" cy="18" r="5" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M30,23 L30,34" fill="none" stroke-width="3.4"/>
+      <path class="stroke" d="M20,25 L30,26 L40,25" fill="none" stroke-width="3"/>
+      <path class="stroke" d="M30,34 L22,38 L20,50" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M30,34 L38,38 L40,50" fill="none" stroke-width="3.2"/>
+    </svg>`,
+    lunge: `<svg viewBox="0 0 64 64">
+      <line class="stroke ground" x1="6" y1="50" x2="58" y2="50" stroke-width="2" fill="none"/>
+      <circle class="stroke" cx="24" cy="18" r="5" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M24,23 L26,34" fill="none" stroke-width="3.4"/>
+      <path class="stroke" d="M26,34 L18,40 L16,50" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M26,34 L40,38 L46,50" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M15,26 L26,28 L34,24" fill="none" stroke-width="3"/>
+    </svg>`,
+    bridge: `<svg viewBox="0 0 64 64">
+      <line class="stroke ground" x1="6" y1="47" x2="58" y2="47" stroke-width="2" fill="none"/>
+      <circle class="stroke" cx="12" cy="40" r="5" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M17,41 L34,31" fill="none" stroke-width="3.6"/>
+      <path class="stroke" d="M34,31 L42,40 L42,47" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M34,31 L50,32 L54,40" fill="none" stroke-width="3"/>
+      <path class="accent" d="M20,26 Q24,22 28,26" fill="none" stroke-width="2.2" stroke-dasharray="1 4"/>
+    </svg>`,
+    calf: `<svg viewBox="0 0 64 64">
+      <line class="stroke ground" x1="20" y1="50" x2="58" y2="50" stroke-width="2" fill="none"/>
+      <circle class="stroke" cx="30" cy="16" r="5" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M30,21 L30,36" fill="none" stroke-width="3.4"/>
+      <path class="stroke" d="M22,24 L30,27 L38,24" fill="none" stroke-width="3"/>
+      <path class="stroke" d="M30,36 L26,44 L28,50" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M30,36 L34,44 L36,50" fill="none" stroke-width="3.2"/>
+      <path class="accent" d="M28,50 L28,53 M36,50 L36,53" stroke-width="2.4"/>
+    </svg>`,
+    wallsit: `<svg viewBox="0 0 64 64">
+      <line class="stroke ground" x1="6" y1="50" x2="58" y2="50" stroke-width="2" fill="none"/>
+      <line class="stroke" x1="46" y1="10" x2="46" y2="50" stroke-width="3"/>
+      <circle class="stroke" cx="28" cy="20" r="5" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M28,25 L38,34 L46,34" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M38,34 L22,36 L20,50" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M22,36 L40,38 L42,50" fill="none" stroke-width="3.2"/>
+    </svg>`,
+    jumpsquat: `<svg viewBox="0 0 64 64">
+      <line class="stroke ground" x1="6" y1="52" x2="58" y2="52" stroke-width="2" fill="none"/>
+      <circle class="stroke" cx="30" cy="14" r="5" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M30,19 L30,28" fill="none" stroke-width="3.4"/>
+      <path class="stroke" d="M18,16 L30,20 L42,16" fill="none" stroke-width="3"/>
+      <path class="stroke" d="M30,28 L22,34 L24,44" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M30,28 L38,34 L36,44" fill="none" stroke-width="3.2"/>
+      <path class="accent" d="M14,40 L14,50 M50,40 L50,50" stroke-width="2.4" stroke-dasharray="2 3"/>
+    </svg>`,
+    burpee: `<svg viewBox="0 0 64 64">
+      <line class="stroke ground" x1="6" y1="52" x2="58" y2="52" stroke-width="2" fill="none"/>
+      <circle class="stroke" cx="34" cy="12" r="5" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M34,17 L32,30" fill="none" stroke-width="3.4"/>
+      <path class="stroke" d="M20,10 L34,15 L44,8" fill="none" stroke-width="3"/>
+      <path class="stroke" d="M32,30 L24,36 L22,48" fill="none" stroke-width="3.2"/>
+      <path class="stroke" d="M32,30 L40,36 L42,48" fill="none" stroke-width="3.2"/>
+      <path class="accent" d="M8,44 Q6,36 12,32" fill="none" stroke-width="2.2" stroke-dasharray="1 4"/>
+    </svg>`
+  };
+
+  document.querySelectorAll('.exicon').forEach(el => {
+    const key = el.getAttribute('data-icon');
+    if (ICONS[key]) el.innerHTML = ICONS[key];
+  });
+
+  // scroll-spy for rail nav
+  const links = document.querySelectorAll('.rail a');
+  const sections = Array.from(links).map(l => document.querySelector(l.getAttribute('href')));
+  function onScroll(){
+    let idx = 0;
+    const y = window.scrollY + 120;
+    sections.forEach((s,i)=>{ if(s && s.offsetTop <= y) idx = i; });
+    links.forEach(l=>l.classList.remove('active'));
+    links[idx].classList.add('active');
+  }
+  window.addEventListener('scroll', onScroll);
+  onScroll();
+
+  // interactive checklist — persisted daily
+  const items = document.querySelectorAll('.cl-item');
+  const total = items.length;
+  const countEl = document.getElementById('clCount');
+  const barEl = document.getElementById('clBar');
+  const progWrap = document.getElementById('clProgress');
+  const LS_KEY = 'fm-checklist-' + new Date().toISOString().slice(0,10);
+
+  function saveState(){
+    const state = Array.from(items).map(el=> el.classList.contains('done')?1:0);
+    try{ localStorage.setItem(LS_KEY, JSON.stringify(state)); localStorage.setItem('fm-checklist-date', LS_KEY); }catch(e){}
+  }
+  function loadState(){
+    try{
+      const raw = localStorage.getItem(LS_KEY);
+      if(!raw) return;
+      const arr = JSON.parse(raw);
+      arr.forEach((v,i)=>{ if(v && items[i]) items[i].classList.add('done'); });
+    }catch(e){}
+  }
+  loadState();
+  function updateProgress(){
+    const done = document.querySelectorAll('.cl-item.done').length;
+    countEl.textContent = done + ' / ' + total + ' done';
+    barEl.style.width = (done/total*100) + '%';
+    progWrap.classList.toggle('full', done === total);
+    saveState();
+  }
+  items.forEach(item=>{
+    item.addEventListener('click', ()=>{
+      item.classList.toggle('done');
+      updateProgress();
+    });
+  });
+  updateProgress();
+
+  // image lightbox — perfect image viewing
+  const lb = document.createElement('div');
+  lb.className = 'lightbox';
+  lb.innerHTML = '<span class="close">&times;</span><img alt=""><span class="cap"></span>';
+  document.body.appendChild(lb);
+  const lbImg = lb.querySelector('img');
+  const lbCap = lb.querySelector('.cap');
+  function openLB(src, alt){
+    lbImg.src = src;
+    lbImg.alt = alt || '';
+    lbCap.textContent = alt || '';
+    lb.classList.add('open');
+  }
+  function closeLB(){ lb.classList.remove('open'); lbImg.removeAttribute('src'); }
+  lb.addEventListener('click', (e)=>{ if(e.target===lb || e.target.classList.contains('close')) closeLB(); });
+  document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeLB(); });
+  document.querySelectorAll('.exphoto img').forEach(img=>{
+    img.addEventListener('click', ()=>{
+      if(img.closest('.noimg')) return;
+      openLB(img.src, img.alt);
+    });
+  });
+  // also allow clicking diagram svgs to enlarge
+  document.querySelectorAll('.workout-diagram img, .cover-hero img, .nutrition-visual img').forEach(img=>{
+    img.style.cursor='zoom-in';
+    img.addEventListener('click', ()=> openLB(img.src, img.alt));
+  });
+</script>
+
+<div style="display:none" aria-hidden="true"><img src="images/cover-hero.svg" alt="preload"><img src="images/workout-a.svg" alt="preload"><img src="images/workout-b.svg" alt="preload"><img src="images/workout-c.svg" alt="preload"><img src="images/nutrition-plate.svg" alt="preload"></div>
+</body>
+</html>

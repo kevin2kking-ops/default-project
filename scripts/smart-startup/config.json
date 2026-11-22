@@ -1,0 +1,24 @@
+{
+  "_comment": "SmartStartup config. Only SAFE apps are managed. Antivirus/security is NEVER touched.",
+  "managedApps": [
+    { "match": "Rainmeter", "delaySec": 60, "priority": "Idle", "minimized": true },
+    { "match": "Wallpaper Slideshow", "delaySec": 90, "priority": "Idle", "minimized": true },
+    { "match": "WallpaperAware", "delaySec": 90, "priority": "Idle", "minimized": true },
+    { "match": "GoogleChromeAutoLaunch", "delaySec": 120, "priority": "Idle", "minimized": true },
+    { "match": "MicrosoftEdgeAutoLaunch", "delaySec": 120, "priority": "Idle", "minimized": true },
+    { "match": "Gemini AI", "delaySec": 150, "priority": "Idle", "minimized": true },
+    { "match": "Google.app", "delaySec": 150, "priority": "Idle", "minimized": true },
+    { "match": "Send to OneNote", "delaySec": 180, "priority": "Idle", "minimized": true }
+  ],
+  "neverTouch": [
+    "SecurityHealth",
+    "Bdagent",
+    "BdVpnApp",
+    "bdservicehost",
+    "seccenter",
+    "OneDrive",
+    "Microsoft.Lists",
+    "Speech Recognition",
+    "GoogleUpdaterTaskUser"
+  ]
+}

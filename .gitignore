@@ -1,0 +1,39 @@
+# ── Environment ──────────────────────────────────────────────────────────
+.env
+!.env.example
+
+# ── Python ──────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+
+# ── Runtime Data ────────────────────────────────────────────────────────
+# Keep the data directory structure but ignore runtime-generated content
+great-sage-auto/data/*.json
+great-sage-auto/data/memory/
+great-sage-auto/data/tasks/
+great-sage-auto/data/plugins/
+
+# ── IDE / Editor ────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── OS ──────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ── OpenCode Internal ───────────────────────────────────────────────────
+# (handled by .opencode/.gitignore)
+.opencode/
+opencode.json
+opencode.jsonc

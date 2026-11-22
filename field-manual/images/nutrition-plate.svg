@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <rect width="600" height="300" fill="#F7F3E8"/>
+  <circle cx="300" cy="150" r="110" fill="none" stroke="#201D17" stroke-width="3"/>
+  <circle cx="300" cy="150" r="100" fill="none" stroke="#C7BC9F" stroke-width="1" stroke-dasharray="3 3"/>
+  
+  <!-- Segments -->
+  <!-- Protein (35%) -->
+  <path d="M300,150 L300,40 A110,110 0 0,1 405,184 Z" fill="#A32F1F" opacity="0.85"/>
+  <!-- Carbs (45%) -->
+  <path d="M300,150 L405,184 A110,110 0 0,1 210,214 Z" fill="#5C6B3F" opacity="0.85"/>
+  <!-- Fats (20%) -->
+  <path d="M300,150 L210,214 A110,110 0 0,1 300,40 Z" fill="#4A453A" opacity="0.85"/>
+
+  <!-- Labels -->
+  <text x="360" y="100" font-family="'Oswald', sans-serif" font-weight="700" font-size="14" fill="#F7F3E8">PROTEIN</text>
+  <text x="360" y="118" font-family="'IBM Plex Mono', monospace" font-size="11" fill="#EDE7D8">100–120g</text>
+
+  <text x="300" y="220" font-family="'Oswald', sans-serif" font-weight="700" font-size="14" fill="#F7F3E8">CARBS</text>
+  <text x="300" y="238" font-family="'IBM Plex Mono', monospace" font-size="11" fill="#EDE7D8">300–350g</text>
+
+  <text x="210" y="130" font-family="'Oswald', sans-serif" font-weight="700" font-size="14" fill="#F7F3E8">FATS</text>
+  <text x="210" y="148" font-family="'IBM Plex Mono', monospace" font-size="11" fill="#EDE7D8">70–90g</text>
+
+  <text x="20" y="40" font-family="'Oswald', sans-serif" font-weight="700" font-size="18" fill="#201D17">MACRONUTRIENT DISTRIBUTION</text>
+  <text x="20" y="60" font-family="'IBM Plex Mono', monospace" font-size="11" fill="#4A453A">Target: 2,400 – 2,800 Daily Calories</text>
+</svg>

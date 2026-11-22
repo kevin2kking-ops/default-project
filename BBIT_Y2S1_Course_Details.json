@@ -1,0 +1,58 @@
+[
+  {
+    "class": "BBIT Y2S1.",
+    "course_code": "CIT 3200",
+    "course_title": "Operating Systems",
+    "lecturer": "Stephen Mageto",
+    "phone": "0726 709309"
+  },
+  {
+    "class": "BBIT Y2S1.",
+    "course_code": "CCS 3200",
+    "course_title": "Data Structures and Algorithms",
+    "lecturer": "Patrick Njuguna",
+    "phone": "0721 238570"
+  },
+  {
+    "class": "BBIT Y2S1.",
+    "course_code": "BFB 3150",
+    "course_title": "Insurance and Risk Management",
+    "lecturer": "Dr. Virginia Wachira",
+    "phone": "721656667"
+  },
+  {
+    "class": "BBIT Y2S1.",
+    "course_code": "CIT 3206",
+    "course_title": "Statistical Programming",
+    "lecturer": "David Kibaara",
+    "phone": "762155044"
+  },
+  {
+    "class": "BBIT Y2S1.",
+    "course_code": "SSA 3120",
+    "course_title": "Probability and Statistics",
+    "lecturer": "NICHOLAS MUGAMBI",
+    "phone": "714839058"
+  },
+  {
+    "class": "BBIT Y2S1.",
+    "course_code": "BEC 3200",
+    "course_title": "Principles of Macroeconomics",
+    "lecturer": "Titus Kirimi",
+    "phone": "717161063"
+  },
+  {
+    "class": "BBIT Y2S1.",
+    "course_code": "BFC 3226",
+    "course_title": "Introduction to Financial Management",
+    "lecturer": "Samuel Mbogori",
+    "phone": "723318260"
+  },
+  {
+    "class": "BBIT Y2S1.",
+    "course_code": "CIT 3202",
+    "course_title": "Network Design and Implementation",
+    "lecturer": "Eli Kangaru",
+    "phone": "0721 818672"
+  }
+]

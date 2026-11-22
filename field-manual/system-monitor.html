@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>System Monitor — Field Manual</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EDE7D8;
+  --paper-light:#F7F3E8;
+  --ink:#201D17;
+  --ink-soft:#4A453A;
+  --red:#A32F1F;
+  --olive:#5C6B3F;
+  --rule:#C7BC9F;
+  --green:#2D7D46;
+}
+*{box-sizing:border-box;}
+html,body{
+  margin:0;
+  padding:0;
+  background:transparent;
+  color:var(--ink);
+  font-family:'IBM Plex Mono', monospace;
+  font-size:13px;
+  line-height:1.5;
+  width:420px;
+  overflow:hidden;
+  user-select:none;
+}
+::selection{background:var(--red);color:var(--paper-light);}
+
+.skin{
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(199,188,159,0.30) 28px),
+    var(--paper);
+  border:2px solid var(--ink);
+  position:relative;
+  padding:0;
+}
+
+/* header */
+.hdr{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 18px 10px;
+  border-bottom:2px solid var(--ink);
+}
+.hdr-title{
+  font-family:'Oswald',sans-serif;
+  font-size:22px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.04em;
+  line-height:1;
+}
+.hdr-title span{color:var(--red);}
+.hdr-stamp{
+  font-family:'Oswald',sans-serif;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:0.12em;
+  color:var(--red);
+  border:2px solid var(--red);
+  border-radius:50%;
+  width:52px;
+  height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  line-height:1.2;
+  transform:rotate(-8deg);
+  flex-shrink:0;
+}
+.hdr-stamp::before{
+  content:"";
+  position:absolute;
+  inset:5px;
+  border:1px solid var(--red);
+  border-radius:50%;
+}
+.hdr-time{
+  font-size:10px;
+  color:var(--ink-soft);
+  letter-spacing:0.06em;
+  margin-top:2px;
+}
+
+/* grid */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  background:var(--rule);
+}
+.card{
+  background:var(--paper);
+  padding:12px 14px 14px;
+  position:relative;
+}
+.card.full{grid-column:1/-1;}
+.card-label{
+  font-family:'Oswald',sans-serif;
+  font-size:10px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  color:var(--ink-soft);
+  margin-bottom:4px;
+}
+.card-value{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:22px;
+  font-weight:600;
+  color:var(--ink);
+  line-height:1.1;
+}
+.card-value .unit{
+  font-size:12px;
+  font-weight:400;
+  color:var(--ink-soft);
+}
+.card-value.sm{font-size:16px;}
+.card-value.xs{font-size:13px;font-weight:400;color:var(--ink-soft);}
+
+/* progress bar */
+.bar-track{
+  height:6px;
+  background:var(--rule);
+  margin-top:6px;
+  position:relative;
+  overflow:hidden;
+}
+.bar-fill{
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:0%;
+  transition:width .6s ease;
+}
+.bar-fill.cpu{background:var(--red);}
+.bar-fill.ram{background:var(--olive);}
+.bar-fill.disk{background:var(--ink);}
+
+/* uptime line */
+.uptime-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.uptime-row .card-value{font-size:18px;}
+
+/* network row */
+.net-row{
+  display:flex;
+  gap:20px;
+}
+.net-item{
+  flex:1;
+}
+.net-label{
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  color:var(--ink-soft);
+}
+.net-val{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:15px;
+  font-weight:500;
+  color:var(--ink);
+}
+
+/* processes */
+.proc-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:2px 8px;
+  margin-top:4px;
+}
+.proc-chip{
+  font-size:10px;
+  color:var(--ink-soft);
+  border:1px solid var(--rule);
+  padding:1px 6px;
+  white-space:nowrap;
+}
+.proc-chip b{color:var(--ink);font-weight:600;}
+
+/* status footer */
+.status{
+  padding:8px 18px;
+  border-top:1px solid var(--rule);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:9px;
+  color:var(--ink-soft);
+  letter-spacing:0.06em;
+}
+.status .dot{
+  display:inline-block;
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--green);
+  margin-right:4px;
+  animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse{
+  0%,100%{opacity:1;}
+  50%{opacity:0.3;}
+}
+
+/* offline message */
+.offline-msg{
+  display:none;
+  padding:18px;
+  text-align:center;
+  font-size:11px;
+  color:var(--ink-soft);
+  border-top:1px solid var(--rule);
+}
+.offline-msg b{color:var(--red);}
+.offline .offline-msg{display:block;}
+.offline .grid,.offline .status .dot{display:none;}
+</style>
+</head>
+<body>
+
+<div class="skin" id="skin">
+  <div class="hdr">
+    <div>
+      <div class="hdr-title">FIELD <span>MONITOR</span></div>
+      <div class="hdr-time" id="hdrTime">--:--:--</div>
+    </div>
+    <div class="hdr-stamp">LIVE<br>DATA</div>
+  </div>
+
+  <div class="grid" id="grid">
+    <div class="card">
+      <div class="card-label">CPU</div>
+      <div class="card-value" id="cpuVal">0<span class="unit">%</span></div>
+      <div class="bar-track"><div class="bar-fill cpu" id="cpuBar" style="width:0%"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-label">RAM</div>
+      <div class="card-value sm" id="ramVal">0<span class="unit"> GB</span></div>
+      <div class="bar-track"><div class="bar-fill ram" id="ramBar" style="width:0%"></div></div>
+    </div>
+    <div class="card full">
+      <div class="card-label">Disk (C:)</div>
+      <div class="card-value sm" id="diskVal">0<span class="unit"> GB / 0 GB</span></div>
+      <div class="bar-track"><div class="bar-fill disk" id="diskBar" style="width:0%"></div></div>
+    </div>
+    <div class="card full uptime-row">
+      <div>
+        <div class="card-label">Uptime</div>
+        <div class="card-value" id="uptimeVal">0d 0h 0m</div>
+      </div>
+      <div style="text-align:right;">
+        <div class="card-label">Processes</div>
+        <div class="card-value sm" id="procVal">0</div>
+      </div>
+    </div>
+    <div class="card full">
+      <div class="card-label">Network</div>
+      <div class="net-row">
+        <div class="net-item">
+          <div class="net-label">&#9660; Download</div>
+          <div class="net-val" id="netDown">0 B/s</div>
+        </div>
+        <div class="net-item" style="text-align:right;">
+          <div class="net-label">&#9650; Upload</div>
+          <div class="net-val" id="netUp">0 B/s</div>
+        </div>
+      </div>
+    </div>
+    <div class="card full" id="topProcs">
+      <div class="card-label">Top Processes</div>
+      <div class="proc-list" id="procList">
+        <span class="proc-chip">--</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="offline-msg">
+    <b>&#9888; OFFLINE</b> &mdash; Run <code>system-monitor.ps1</code> to enable live data
+  </div>
+
+  <div class="status">
+    <span><span class="dot"></span>MONITORING</span>
+    <span id="lastUpdate">waiting...</span>
+  </div>
+</div>
+
+<script>
+const DATA_FILE = 'system-monitor.json';
+
+function fmtSize(bytes){
+  if(bytes===0) return '0 B';
+  const units=['B','KB','MB','GB','TB'];
+  const i=Math.min(Math.floor(Math.log(bytes)/Math.log(1024)),units.length-1);
+  return (bytes/Math.pow(1024,i)).toFixed(i===0?0:1)+' '+units[i];
+}
+
+function fmtUptime(sec){
+  const d=Math.floor(sec/86400);
+  const h=Math.floor((sec%86400)/3600);
+  const m=Math.floor((sec%3600)/60);
+  return d+'d '+h+'h '+m+'m';
+}
+
+function updateClock(){
+  const d=new Date();
+  document.getElementById('hdrTime').textContent=
+    d.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+}
+
+function updateUI(data){
+  const skin=document.getElementById('skin');
+  if(!data||data.error){
+    skin.classList.add('offline');
+    return;
+  }
+  skin.classList.remove('offline');
+
+  const cpu=Math.round(data.cpu||0);
+  document.getElementById('cpuVal').innerHTML=cpu+'<span class="unit">%</span>';
+  document.getElementById('cpuBar').style.width=cpu+'%';
+
+  const ramUsed=(data.ramUsed||0);
+  const ramTotal=(data.ramTotal||1);
+  const ramPct=Math.round((ramUsed/ramTotal)*100);
+  document.getElementById('ramVal').innerHTML=ramUsed.toFixed(1)+'<span class="unit"> GB</span>';
+  document.getElementById('ramBar').style.width=ramPct+'%';
+
+  const diskUsed=(data.diskUsed||0);
+  const diskTotal=(data.diskTotal||1);
+  const diskPct=Math.round((diskUsed/diskTotal)*100);
+  document.getElementById('diskVal').innerHTML=diskUsed.toFixed(1)+'<span class="unit"> GB / '+diskTotal.toFixed(0)+' GB</span>';
+  document.getElementById('diskBar').style.width=diskPct+'%';
+
+  document.getElementById('uptimeVal').textContent=fmtUptime(data.uptime||0);
+  document.getElementById('procVal').textContent=data.processes||0;
+
+  document.getElementById('netDown').textContent=fmtSize(data.netDown||0)+'/s';
+  document.getElementById('netUp').textContent=fmtSize(data.netUp||0)+'/s';
+
+  const list=document.getElementById('procList');
+  if(data.topProcs&&data.topProcs.length){
+    list.innerHTML=data.topProcs.map(p =>
+      '<span class="proc-chip"><b>'+p.name+'</b> '+p.cpu+'%</span>'
+    ).join('');
+  }else{
+    list.innerHTML='<span class="proc-chip">--</span>';
+  }
+
+  document.getElementById('lastUpdate').textContent=
+    'updated '+new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});
+}
+
+async function fetchData(){
+  try{
+    const resp=await fetch(DATA_FILE+'?t='+Date.now());
+    if(!resp.ok)throw new Error('Not found');
+    const data=await resp.json();
+    updateUI(data);
+  }catch(e){
+    updateUI({error:true});
+  }
+}
+
+updateClock();
+setInterval(updateClock,1000);
+fetchData();
+setInterval(fetchData,3000);
+</script>
+</body>
+</html>

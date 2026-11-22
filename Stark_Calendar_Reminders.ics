@@ -1,0 +1,46 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Kenya Biz Manager//Stark Wealth Plan//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:stark-day1@kenyabizmanager
+DTSTAMP:20260908T120000Z
+DTSTART:20260909T030000Z
+DTEND:20260909T040000Z
+SUMMARY:STARK Day 1 - Canva + 10 Pitches
+DESCRIPTION:Hour1: Watch Canva tutorial\nHour2: Make 2 posters\nHour3: Pitch 10 businesses on WhatsApp with prototype screenshot
+END:VEVENT
+BEGIN:VEVENT
+UID:stark-day7@kenyabizmanager
+DTSTAMP:20260908T120000Z
+DTSTART:20260915T030000Z
+DTEND:20260915T040000Z
+SUMMARY:STARK Day 7 - Portfolio DONE
+DESCRIPTION:Must have: 6 posters + 2 videos + Portfolio PDF + 50 business list. If not done\, extend 2 days.
+END:VEVENT
+BEGIN:VEVENT
+UID:stark-day30@kenyabizmanager
+DTSTAMP:20260908T120000Z
+DTSTART:20261008T030000Z
+DTEND:20261008T040000Z
+SUMMARY:STARK Checkpoint 30 Days - 100 Pitches
+DESCRIPTION:Target: 100 pitches sent\, 10 replies\, 2 free trials. Count now. If less than 2 trials\, double pitches next week.
+END:VEVENT
+BEGIN:VEVENT
+UID:stark-day60@kenyabizmanager
+DTSTAMP:20260908T120000Z
+DTSTART:20261107T030000Z
+DTEND:20261107T040000Z
+SUMMARY:STARK Checkpoint 60 Days - First 60k
+DESCRIPTION:Goal: 3 clients x 20k = 60k. Should have testimonials. If not\, review sales script.
+END:VEVENT
+BEGIN:VEVENT
+UID:stark-day90@kenyabizmanager
+DTSTAMP:20260908T120000Z
+DTSTART:20261207T030000Z
+DTEND:20261207T040000Z
+SUMMARY:STARK Checkpoint 90 Days - 100k + Stark v1 Start
+DESCRIPTION:Goal: 4 clients x 25k = 100k. SACCO 30k saved. Choose Track A/B/C. Start Stark build tomorrow.
+END:VEVENT
+END:VCALENDAR
